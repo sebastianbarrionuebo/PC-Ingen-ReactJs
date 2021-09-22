@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+// 1)Me traigo la libreria de React
+import React from 'react';  //<= (1)
+
+// 2)Me traigo la libreria de React DOM
+import ReactDOM from 'react-dom';   //<= (2)
+
+// 3)Genero un componente
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./CSS/style.css"
 
+// 4)Renderizo el componente
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <App/>,
+  document.getElementById("root")
+)

@@ -1,6 +1,9 @@
 body{
     background-color: rgb(148, 148, 148);
 }
-.parrafo{
-    font-size: 30px;
+main{
+    margin-top: 80px;
+}
+.color2{
+    color: white;
 }

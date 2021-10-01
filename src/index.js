@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';   //<= (2)
 
 // 3)Genero un componente
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./CSS/style.css"
 
 // 4)Renderizo el componente

@@ -1,17 +1,27 @@
 import ItemList from "./ItemList"
-//import { useState } from "react"
-//import Button from  "react-bootstrap/Button"
+import { useState, useEffect } from "react"
 
 const ItemListContainer = () => {
+    //Este array simula ser los datos de una API
+    const datosDeLaAPI  =   [{id: 1, name:"Producto 1"},
+                            {id: 1, name:"Producto 1"},
+                            {id: 1, name:"Producto 1"},
+                            {id: 1, name:"Producto 1"}]
 
 
-    setTimeout(() => {
-        console.log("Pidiendo datos a la API")
-    },2000)
+    const [datosAPI, setdatosAPI] = useState(null)
+    
+    useEffect(
+        setTimeout(() => {
+            console.log("Pidiendo datos a la API")
+            setdatosAPI(datosDeLaAPI)
+        },2000)
+    ,[])
+
 
     return (
         <>
-            <ItemList props="{datosDeLaAPI}" />
+            <ItemList props={datosAPI} />
         </>
     );
 }

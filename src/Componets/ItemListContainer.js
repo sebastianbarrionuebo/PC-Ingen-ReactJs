@@ -1,7 +1,17 @@
-const ItemListContainer = ({prop1}) => {
+import ItemList from "./ItemList"
+//import { useState } from "react"
+import Button from  "react-bootstrap/Button"
+
+const ItemListContainer = () => {
+
+
+    let timer = setTimeout(() => {
+        <ItemList />
+    },2000)
+
     return (
         <>
-            <p>{prop1}! you are welcome to my homepage!</p>
+            <Button onClick={timer}>Tienda</Button>
         </>
     );
 }

@@ -9,10 +9,10 @@ const ItemListContainer = () => {
             setTimeout(() => {
                 console.log("Pidiendo datos a la API")
                 //Este array simula ser los datos de una API
-                const datosDeLaAPI  =   [{id: 1, name:"Producto 1"},
-                            {id: 1, name:"Producto 2"},
-                            {id: 1, name:"Producto 3"},
-                            {id: 1, name:"Producto 4"}]
+                const datosDeLaAPI  =   [{title:"Producto 1", description:"lorem20000", price:"{200}", pictureUrl:"http://placehold.it/300x200"},
+                                        {title:"Producto 2", description:"lorem20000", price:"{200}", pictureUrl:"http://placehold.it/300x200"},
+                                        {title:"Producto 3", description:"lorem20000", price:"{200}", pictureUrl:"http://placehold.it/300x200"},
+                                        {title:"Producto 4", description:"lorem20000", price:"{200}", pictureUrl:"http://placehold.it/300x200"}]
                 if(datosDeLaAPI != null){
                     res(datosDeLaAPI)
                 }else{

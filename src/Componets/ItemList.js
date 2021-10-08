@@ -9,17 +9,11 @@ const ItemList = (props) => {
         <>
             <Container>
                 <Row>
-                    { props.map((producto,i) => {
-                        return (
-                            <Col sm={6} md={4} lg={3} className="pt-3">
-                                <Item
-                                    title={producto.title}
-                                    description={producto.description}
-                                    price={producto.price}
-                                    pictureUrl={producto.pictureUrl}
-                                ></Item>
-                            </Col>)
-                        }) 
+                    { props.info.map(producto => (
+                            <Col sm={6} md={4} lg={3} className="pt-3" >
+                                <Item infoProducto={producto} ></Item>
+                            </Col>
+                        )) 
                     }
                 </Row>
             </Container>

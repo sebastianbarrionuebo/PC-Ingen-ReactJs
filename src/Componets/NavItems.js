@@ -1,26 +1,26 @@
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
-
-const {Link,Item} = Nav
+const {Item} = Nav
 
 const NavItems = () => {
     return (
         <>
             <Container>
                 <Nav className="justify-content-end">
-                    <Item>
-                        <Link href="/">Index</Link>
+                    <Item className="p-1">
+                        <Link to="/">Home</Link>
                     </Item>
-                    <Item>
-                        <Link href="/">Armado</Link>
+                    <Item className="p-1">
+                        <Link to="/Category/2">Store</Link>
                     </Item>
-                    <Item>
-                        <Link href="/">Contacto</Link>
+                    <Item className="p-1">
+                        <Link to="/Item/3">Item</Link>
                     </Item>
-                    <Item>
-                        <CartWidget/>
+                    <Item className="p-1">
+                        <Link to="/Cart"><CartWidget/></Link>
                     </Item>
                 </Nav>
             </Container>

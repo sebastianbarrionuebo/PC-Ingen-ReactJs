@@ -1,8 +1,15 @@
 body{
     background-color: rgb(148, 148, 148);
+    background-image: url("../Assets/PCfondo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 main{
     margin-top: 80px;
+}
+footer{
+    color: white;
 }
 .color2{
     color: white;

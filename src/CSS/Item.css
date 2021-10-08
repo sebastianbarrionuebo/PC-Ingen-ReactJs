@@ -1,0 +1,9 @@
+.card{
+}
+.card-body_background{
+    background-color: rgb(141, 139, 139);
+    border-color: rgb(141, 139, 139);
+}
+.card-footer_background{
+    background-color: rgb(82, 80, 80);
+}

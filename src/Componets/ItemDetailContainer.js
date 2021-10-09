@@ -2,9 +2,6 @@ import { useState, useEffect } from "react"
 import ItemDetail from "./ItemDetail"
 
 
-const arr = {id: 1, title:"Producto 1", descriptiom:"lorem10", price:"200", pictureUrl:"http://placehold.it/300x200"}
-
-
 const ItemDetailContainer = () => {
     const [datosAPI, setdatosAPI] = useState(null)
     
@@ -23,10 +20,16 @@ const ItemDetailContainer = () => {
         })
         pidiendoDatosALaAPI.then(res => setdatosAPI(res))
     },[])
-    
+
     return (
         <>
-            <ItemDetail info={arr} />
+        {datosAPI ?
+            <>
+                <ItemDetail info={datosAPI} />
+            </>
+            :
+            <div>Cargando </div>
+        }
         </>
     );
 }

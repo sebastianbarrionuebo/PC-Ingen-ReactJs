@@ -37,11 +37,6 @@ const ItemCount = ({ stock, initial}) => {
                         <Button variant="danger" onClick={restar}>Restar</Button>
                     </Col>
                 </Row>
-                <Row className="p-2">
-                    <Col className="text-center">
-                        <Link className="btn btn-dark" to="/Item/1">Add</Link>
-                    </Col>
-                </Row>
             </Container>
         </>
     );

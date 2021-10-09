@@ -13,16 +13,15 @@ const ItemDetail = (props) => {
         <>
             <Container className="pt-4" >
                 <Row>
-                    <Col className="justify-content-center" >
+                    <Col>
                         <Card key={props.info.id} className="bg-secondary">
-                            <Body className="card-body_background ">
+                            <Body className="imagen">
                                 <Img src={props.info.pictureUrl} className="h-30 w-auto"/>
-                                <Title>{props.info.title}</Title>
+                                <Title className="pt-4 pb-4">{props.info.title}</Title>
                                 <Text>{props.info.description}</Text>
                                 <Text>Precio: {props.info.price}</Text>
                             </Body>
                             <Footer className="card-footer_background">
-                                <ItemCount stock={5} initial={1} />
                             </Footer>
                         </Card>
                     </Col>

@@ -7,3 +7,11 @@
 .card-footer_background{
     background-color: rgb(82, 80, 80);
 }
+.pading{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.imagen{
+    display:block;
+    margin:auto;
+}

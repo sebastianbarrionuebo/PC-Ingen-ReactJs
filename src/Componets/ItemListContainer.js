@@ -29,11 +29,11 @@ const ItemListContainer = () => {
         pidiendoDatosALaAPI.then(res => setdatosAPI(res))
     },[])
 
-    const resultado = useParams()
+    {/*const resultado = useParams()
     const {id} = resultado
     useEffect(() => {
 
-    },[id])
+    },[id])*/}
 
     return (
         <>

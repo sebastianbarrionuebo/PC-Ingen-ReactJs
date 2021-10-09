@@ -22,6 +22,7 @@ const ItemDetail = (props) => {
                                 <Text>Precio: {props.info.price}</Text>
                             </Body>
                             <Footer className="card-footer_background">
+                                <ItemCount />
                             </Footer>
                         </Card>
                     </Col>

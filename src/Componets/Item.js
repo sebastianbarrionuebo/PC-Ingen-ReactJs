@@ -21,7 +21,7 @@ const Item = (props) => {
                     <ItemCount stock={5} initial={1} />
                     <Row className="p-2">
                         <Col className="text-center">
-                            <Link className="btn btn-dark" to="/Item/">Add</Link>
+                            <Link className="btn btn-dark" to="/Item/:id">Add</Link>
                         </Col>
                     </Row>
                 </Footer>

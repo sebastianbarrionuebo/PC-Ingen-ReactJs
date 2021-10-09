@@ -17,9 +17,6 @@ const NavItems = () => {
                         <Link to="/Category/2">Store</Link>
                     </Item>
                     <Item className="p-1">
-                        <Link to="/Item/3">Item</Link>
-                    </Item>
-                    <Item className="p-1">
                         <Link to="/Cart"><CartWidget/></Link>
                     </Item>
                 </Nav>

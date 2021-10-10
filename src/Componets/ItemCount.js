@@ -3,7 +3,6 @@ import Button from  "react-bootstrap/Button"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
-import { Link } from 'react-router-dom';
 
 
 const ItemCount = ({ stock, initial}) => {
@@ -35,11 +34,6 @@ const ItemCount = ({ stock, initial}) => {
                     </Col>
                     <Col className="text-center p-2" sm={6}>
                         <Button variant="danger" onClick={restar}>Restar</Button>
-                    </Col>
-                </Row>
-                <Row className="p-2">
-                    <Col className="text-center">
-                        <Link className="btn btn-dark" to="/Item/1">Add</Link>
                     </Col>
                 </Row>
             </Container>

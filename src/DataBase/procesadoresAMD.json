@@ -1,0 +1,34 @@
+[
+    {
+        "id":"0",
+        "title": "AMD - Athom",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
+        "price": 8000,
+        "pictureUrl": "Athom",
+        "stock": 20
+    },
+    {
+        "id":"1",
+        "title": "AMD - ryzen3",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
+        "price": 12000,
+        "pictureUrl":"ryzen3",
+        "stock": 30
+    },
+    {
+        "id":"2",
+        "title": "AMD - ryzen5",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse." ,
+        "price": 22000,
+        "pictureUrl":"ryzen5",
+        "stock": 40
+    },
+    {
+        "id":"3",
+        "title": "AMD - ryzen7",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
+        "price": 32000,
+        "pictureUrl":"ryzen7",
+        "stock": 40
+    }
+]

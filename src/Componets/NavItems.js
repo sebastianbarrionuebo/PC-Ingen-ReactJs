@@ -14,10 +14,7 @@ const NavItems = () => {
                         <Link to="/">Home</Link>
                     </Item>
                     <Item className="p-1">
-                        <Link to="/Category/2">Store</Link>
-                    </Item>
-                    <Item className="p-1">
-                        <Link to="/Item/3">Item</Link>
+                        <Link to="/Category/1">Store</Link>
                     </Item>
                     <Item className="p-1">
                         <Link to="/Cart"><CartWidget/></Link>

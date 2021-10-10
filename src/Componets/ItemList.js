@@ -11,7 +11,7 @@ const ItemList = (props) => {
                 <Row>
                     { props.info.map(producto => (
                             <Col sm={6} md={4} lg={3} className="pt-3" >
-                                <Item infoProducto={producto} ></Item>
+                                <Item key={producto.id} infoProducto={producto} ></Item>
                             </Col>
                         )) 
                     }

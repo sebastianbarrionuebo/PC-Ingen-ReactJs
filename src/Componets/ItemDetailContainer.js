@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
 import ItemDetail from "./ItemDetail"
-
-
-const arr = {id: 1, title:"Producto 1", descriptiom:"lorem10", price:"200", pictureUrl:"http://placehold.it/300x200"}
-
+import { useParams } from 'react-router-dom';
+import procesadores from "../DataBase/procesadoresAMD.json"
+import Athom from "../Assets/Athom.png"
+import Ryzen3 from "../Assets/Ryzen3.png"
+import Ryzen5 from "../Assets/Ryzen5.png"
+import Ryzen7 from "../Assets/Ryzen7.png"
 
 const ItemDetailContainer = () => {
     const [datosAPI, setdatosAPI] = useState(null)
@@ -13,7 +15,7 @@ const ItemDetailContainer = () => {
             setTimeout(() => {
                 console.log("Pidiendo datos a la API")
                 //Este objeto simula ser los datos de una API
-                const datosDeLaAPI  =   {id: 1, title:"Producto 1", descriptiom:"lorem10", price:"200", pictureUrl:"http://placehold.it/300x200"}
+                const datosDeLaAPI  =   {id: 1, title:"AMD - Athom", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:8000, pictureUrl:Athom, link:"/Item/1"}
                 if(datosDeLaAPI != null){
                     res(datosDeLaAPI)
                 }else{
@@ -23,10 +25,28 @@ const ItemDetailContainer = () => {
         })
         pidiendoDatosALaAPI.then(res => setdatosAPI(res))
     },[])
-    
+
+
+
+
+    const {id} = useParams()
+
+    const [datosProducto, setdatosProducto] = useState([])
+
+    useEffect(() => {
+        setdatosProducto(procesadores[id])
+    },[id])
+
+
     return (
         <>
-            <ItemDetail info={arr} />
+        {datosAPI ?
+            <>
+                <ItemDetail info={datosProducto} />
+            </>
+            :
+            <div>Cargando </div>
+        }
         </>
     );
 }

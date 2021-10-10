@@ -14,17 +14,10 @@ const ItemListContainer = () => {
             setTimeout(() => {
                 console.log("Pidiendo datos a la API")
                 //Este array simula ser los datos de una API
-<<<<<<< HEAD
                 const datosDeLaAPI  =   [{id: 1, title:"AMD - Athom", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:8000, pictureUrl:Athom, link:"/Item/0"},
                                         {id: 2, title:"AMD - Ryzen3", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:12000, pictureUrl:Ryzen3, link:"/Item/1"},
                                         {id: 3, title:"AMD - Ryzen5", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:22000, pictureUrl:Ryzen5, link:"/Item/2"},
                                         {id: 4, title:"AMD - Ryzen7", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:32000, pictureUrl:Ryzen7, link:"/Item/3"}]
-=======
-                const datosDeLaAPI  =   [{id: 1, title:"AMD - Athom", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:8000, pictureUrl:Athom, link:"/Item/1"},
-                                        {id: 2, title:"AMD - Ryzen3", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:12000, pictureUrl:Ryzen3, link:"/Item/2"},
-                                        {id: 3, title:"AMD - Ryzen5", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:22000, pictureUrl:Ryzen5, link:"/Item/3"},
-                                        {id: 4, title:"AMD - Ryzen7", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:32000, pictureUrl:Ryzen7, link:"/Item/4"}]
->>>>>>> 7ef43625ba8508cccca1f615223b996ffc8674e1
                 
                 if(datosDeLaAPI != null){
                     res(datosDeLaAPI)
@@ -35,12 +28,6 @@ const ItemListContainer = () => {
         })
         pidiendoDatosALaAPI.then(res => setdatosAPI(res))
     },[])
-
-    {/*const resultado = useParams()
-    const {id} = resultado
-    useEffect(() => {
-
-    },[id])*/}
 
     return (
         <>

@@ -16,27 +16,16 @@ const ItemDetail = (props) => {
         <>
             <Container className="pt-4" >
                 <Row>
-<<<<<<< HEAD
                     <Col fluid="true">
                         <Card key={props.info.id} className="bg-secondary">
                             <Body className="imagen">
                                 <Img src={props.info.pictureUrl} className="h-auto w-3"/>
-=======
-                    <Col>
-                        <Card key={props.info.id} className="bg-secondary">
-                            <Body className="imagen">
-                                <Img src={props.info.pictureUrl} className="h-30 w-auto"/>
->>>>>>> 7ef43625ba8508cccca1f615223b996ffc8674e1
                                 <Title className="pt-4 pb-4">{props.info.title}</Title>
                                 <Text>{props.info.description}</Text>
                                 <Text>Precio: {props.info.price}</Text>
                             </Body>
                             <Footer className="card-footer_background">
-<<<<<<< HEAD
                                 <ItemCount stock={props.info.stock} initial={0}/>
-=======
-                                <ItemCount />
->>>>>>> 7ef43625ba8508cccca1f615223b996ffc8674e1
                             </Footer>
                         </Card>
                     </Col>

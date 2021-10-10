@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react"
 import ItemDetail from "./ItemDetail"
 import { useParams } from 'react-router-dom';
+<<<<<<< HEAD
 import procesadores from "../DataBase/procesadoresAMD.json"
+=======
+>>>>>>> 7ef43625ba8508cccca1f615223b996ffc8674e1
 import Athom from "../Assets/Athom.png"
 import Ryzen3 from "../Assets/Ryzen3.png"
 import Ryzen5 from "../Assets/Ryzen5.png"
@@ -28,6 +31,7 @@ const ItemDetailContainer = () => {
 
 
 
+<<<<<<< HEAD
 
     const {id} = useParams()
 
@@ -36,13 +40,41 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setdatosProducto(procesadores[id])
     },[id])
+=======
+    const [datosProd, setdatosProd] = useState(null)
+    const resultado = useParams()
+    const {id} = resultado
+    {/*useEffect(() => {
+        switch (resultado.id) {
+            case "1":
+                setdatosProd(datosAPI[0])
+            break;
+            case "2":
+                setdatosProd(datosAPI[1])
+            break;
+            case "3":
+                setdatosProd(datosAPI[2])
+            break;
+            case "4":
+                setdatosProd(datosAPI[3])
+            break;
+        
+            default:
+        break;
+        }
+    },[id])*/}
+>>>>>>> 7ef43625ba8508cccca1f615223b996ffc8674e1
 
 
     return (
         <>
         {datosAPI ?
             <>
+<<<<<<< HEAD
                 <ItemDetail info={datosProducto} />
+=======
+                <ItemDetail info={datosAPI} />
+>>>>>>> 7ef43625ba8508cccca1f615223b996ffc8674e1
             </>
             :
             <div>Cargando </div>

@@ -8,8 +8,7 @@ import Ryzen5 from "../Assets/Ryzen5.png"
 import Ryzen7 from "../Assets/Ryzen7.png"
 
 const ItemDetailContainer = () => {
-    const [datosAPI, setdatosAPI] = useState(null)
-    
+    {/*const [datosAPI, setdatosAPI] = useState(null)
     useEffect(() => {
         const pidiendoDatosALaAPI = new Promise((res,rej)=>{
             setTimeout(() => {
@@ -24,29 +23,34 @@ const ItemDetailContainer = () => {
             },2000)
         })
         pidiendoDatosALaAPI.then(res => setdatosAPI(res))
-    },[])
+    },[])*/}
 
 
 
+
+    const [datosProducto, setdatosProducto] = useState(null)
 
     const {id} = useParams()
 
-    const [datosProducto, setdatosProducto] = useState([])
-
     useEffect(() => {
-        setdatosProducto(procesadores[id])
+        const pidiendoDatosALaAPI = new Promise((res,rej)=>{
+            setTimeout(() => { //Simula pedido a una API
+                const producto = procesadores.find(producto => producto.id == id)
+                res(producto)
+            },2000)
+        })
+        pidiendoDatosALaAPI.then(producto => setdatosProducto(producto))
     },[id])
-
 
     return (
         <>
-        {datosAPI ?
-            <>
-                <ItemDetail info={datosProducto} />
-            </>
-            :
-            <div>Cargando </div>
-        }
+            {datosProducto ?
+                <>
+                    <ItemDetail info={datosProducto} />
+                </>
+                :
+                <div>Cargando </div>
+            }
         </>
     );
 }

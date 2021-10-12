@@ -10,8 +10,8 @@ const ItemList = (props) => {
             <Container>
                 <Row>
                     { props.info.map(producto => (
-                            <Col sm={6} md={4} lg={3} className="pt-3" >
-                                <Item key={producto.id} infoProducto={producto} ></Item>
+                            <Col sm={6} md={4} lg={3} className="pt-3" key={producto.id}>
+                                <Item infoProducto={producto} ></Item>
                             </Col>
                         )) 
                     }

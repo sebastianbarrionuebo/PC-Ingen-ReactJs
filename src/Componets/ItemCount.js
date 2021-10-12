@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 
 
-const ItemCount = ({ stock, initial}) => {
+const ItemCount = ({ stock, initial, add}) => {
     const [contador, setContador] = useState(initial);
     
     
@@ -19,6 +19,10 @@ const ItemCount = ({ stock, initial}) => {
             setContador(contador - 1)
         }
     };
+
+    const addCarrito = () => {
+        add(contador)
+    }
 
     return (
         <>
@@ -34,6 +38,11 @@ const ItemCount = ({ stock, initial}) => {
                     </Col>
                     <Col className="text-center p-2" sm={6}>
                         <Button variant="danger" onClick={restar}>Restar</Button>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="text-center pb-2">
+                        <Button variant="dark" onClick={addCarrito}>onAdd</Button>
                     </Col>
                 </Row>
             </Container>

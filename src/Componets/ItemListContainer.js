@@ -1,5 +1,6 @@
 import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
+import procesadores from "../DataBase/procesadoresAMD.json"
 import Athom from "../Assets/Athom.png"
 import Ryzen3 from "../Assets/Ryzen3.png"
 import Ryzen5 from "../Assets/Ryzen5.png"
@@ -7,17 +8,16 @@ import Ryzen7 from "../Assets/Ryzen7.png"
 
 
 const ItemListContainer = () => {
-    const [datosAPI, setdatosAPI] = useState(null)
-    
+    {/*const [datosAPI, setdatosAPI] = useState(null)
     useEffect(() => {
         const pidiendoDatosALaAPI = new Promise((res,rej)=>{
             setTimeout(() => {
                 console.log("Pidiendo datos a la API")
                 //Este array simula ser los datos de una API
-                const datosDeLaAPI  =   [{id: 1, title:"AMD - Athom", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:8000, pictureUrl:Athom, link:"/Item/0"},
-                                        {id: 2, title:"AMD - Ryzen3", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:12000, pictureUrl:Ryzen3, link:"/Item/1"},
-                                        {id: 3, title:"AMD - Ryzen5", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:22000, pictureUrl:Ryzen5, link:"/Item/2"},
-                                        {id: 4, title:"AMD - Ryzen7", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.", price:32000, pictureUrl:Ryzen7, link:"/Item/3"}]
+                const datosDeLaAPI  =   [{id: 1, title:"AMD - Athom", price:8000, pictureUrl:Athom, categoria:"1", to:"/Item/0", stock:20, description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse."},
+                                        {id: 2, title:"AMD - Ryzen3", price:12000, pictureUrl:Ryzen3, categoria:"1", to:"/Item/1", stock:30, description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse."},
+                                        {id: 3, title:"AMD - Ryzen5", price:22000, pictureUrl:Ryzen5, categoria:"1", to:"/Item/2", stock:40, description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse."},
+                                        {id: 4, title:"AMD - Ryzen7", price:32000, pictureUrl:Ryzen7, categoria:"1", to:"/Item/3", stock:40, description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse."}]
                 
                 if(datosDeLaAPI != null){
                     res(datosDeLaAPI)
@@ -27,13 +27,31 @@ const ItemListContainer = () => {
             },2000)
         })
         pidiendoDatosALaAPI.then(res => setdatosAPI(res))
+    },[])*/}
+
+
+
+
+    const [datosProductos, setdatosProductos] = useState(null)
+
+    useEffect(() => {
+        const pidiendoDatosALaAPI = new Promise((res,rej)=>{
+            setTimeout(() => { //Simula pedido a una API
+                if(procesadores != null){
+                    res(procesadores)
+                }else{
+                    rej('Error')
+                }
+            },2000)
+        })
+        pidiendoDatosALaAPI.then(res => setdatosProductos(res))
     },[])
 
     return (
         <>
-        {datosAPI ?
+        {datosProductos ?
             <>
-                <ItemList info={datosAPI} />
+                <ItemList info={datosProductos} />
             </>
             :
             <div>

@@ -2,6 +2,8 @@ import Navbar from "react-bootstrap/Navbar"
 import NavItems from './NavItems'
 import Container from "react-bootstrap/Container"
 import { Link } from "react-router-dom"
+import "../CSS/header.css"
+
 
 const {Brand,Collapse,Toggle} = Navbar
 

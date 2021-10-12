@@ -5,7 +5,9 @@
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
         "price": 8000,
         "pictureUrl": "Athom",
-        "stock": 20
+        "stock": 20,
+        "categoria": 1,
+        "to":"0"
     },
     {
         "id":"1",
@@ -13,7 +15,9 @@
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
         "price": 12000,
         "pictureUrl":"ryzen3",
-        "stock": 30
+        "stock": 30,
+        "categoria": 1,
+        "to":"1"
     },
     {
         "id":"2",
@@ -21,7 +25,9 @@
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse." ,
         "price": 22000,
         "pictureUrl":"ryzen5",
-        "stock": 40
+        "stock": 40,
+        "categoria": 1,
+        "to":"2"
     },
     {
         "id":"3",
@@ -29,6 +35,8 @@
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
         "price": 32000,
         "pictureUrl":"ryzen7",
-        "stock": 40
+        "stock": 40,
+        "categoria": 1,
+        "to":"3"
     }
 ]

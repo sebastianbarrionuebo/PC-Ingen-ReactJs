@@ -12,6 +12,15 @@ import "../CSS/Item.css"
 const {Body,Img,Footer,Text,Title,} = Card
 
 const ItemDetail = (props) => {
+
+    const cantidadProductos = (cantidad) => {
+        //console.log(cantidad)
+        //console.log(props.info)
+    }
+
+
+
+
     return (
         <>
             <Container className="pt-4" >
@@ -25,7 +34,7 @@ const ItemDetail = (props) => {
                                 <Text>Precio: {props.info.price}</Text>
                             </Body>
                             <Footer className="card-footer_background">
-                                <ItemCount stock={props.info.stock} initial={0}/>
+                                <ItemCount stock={props.info.stock} initial={1} add={cantidadProductos} />
                             </Footer>
                         </Card>
                     </Col>

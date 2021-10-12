@@ -1,9 +1,6 @@
 body{
-    background-color: rgb(148, 148, 148);
-    background-image: url("../Assets/PCfondo2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: rgb(149,126,209);
+    background: radial-gradient(circle, rgba(149,126,209,1) 0%, rgba(42,43,78,1) 85%);
 }
 main{
     margin-top: 80px;

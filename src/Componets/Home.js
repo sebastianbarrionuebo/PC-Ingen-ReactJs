@@ -1,6 +1,16 @@
+import "../CSS/home.css"
+
+
 const Home = () => {
     return (
-        <h2>Welcome to Homepage</h2>
+        <>
+            <div clasName="" >
+                <h2 className="text-center titlePrimary">Bienvenido a PC Ingen</h2>
+                <h2 className="text-center titleSecundary">Arma tu propia computadora!</h2>
+
+
+            </div>
+        </>
     );
 }
 

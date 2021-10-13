@@ -4,7 +4,7 @@
         "title": "AMD - Athom",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
         "price": 8000,
-        "pictureUrl": "Athom",
+        "pictureUrl": "http://localhost:3000/Images/Athom.png",
         "stock": 20,
         "categoria": 1,
         "to":"0"
@@ -14,7 +14,7 @@
         "title": "AMD - ryzen3",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
         "price": 12000,
-        "pictureUrl":"ryzen3",
+        "pictureUrl":"http://localhost:3000/Images/ryzen3.png",
         "stock": 30,
         "categoria": 1,
         "to":"1"
@@ -24,7 +24,7 @@
         "title": "AMD - ryzen5",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse." ,
         "price": 22000,
-        "pictureUrl":"ryzen5",
+        "pictureUrl":"http://localhost:3000/Images/ryzen5.png",
         "stock": 40,
         "categoria": 1,
         "to":"2"
@@ -34,7 +34,7 @@
         "title": "AMD - ryzen7",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellendus rerum, mollitia cupiditate explicabo, fugit ratione, ipsam officiis ducimus sit voluptatem dolor ipsum ut suscipit ex vitae vel odit esse.",
         "price": 32000,
-        "pictureUrl":"ryzen7",
+        "pictureUrl":"http://localhost:3000/Images/ryzen7.png",
         "stock": 40,
         "categoria": 1,
         "to":"3"

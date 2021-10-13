@@ -1,10 +1,7 @@
 import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
+import ScreenLoad from "./ScreenLoad"
 import procesadores from "../DataBase/procesadoresAMD.json"
-import Athom from "../Assets/Athom.png"
-import Ryzen3 from "../Assets/Ryzen3.png"
-import Ryzen5 from "../Assets/Ryzen5.png"
-import Ryzen7 from "../Assets/Ryzen7.png"
 
 
 const ItemListContainer = () => {
@@ -51,12 +48,12 @@ const ItemListContainer = () => {
         <>
         {datosProductos ?
             <>
-                <ItemList info={datosProductos} />
+                <div className="item-container_padding">
+                    <ItemList info={datosProductos} />
+                </div>
             </>
             :
-            <div>
-                <h2>Cargando</h2>
-            </div>
+            <ScreenLoad/>
         }
         </>
     );

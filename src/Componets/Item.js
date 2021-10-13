@@ -3,7 +3,6 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import { Link } from 'react-router-dom';
 import "../CSS/Item.css"
-import Athom from "../Assets/Athom.png"
 
 const {Body,Img,Footer,Text,Title} = Card
 
@@ -11,8 +10,8 @@ const Item = (props) => {
     return (
         <>
             <Card className="bg-secondary" >
+                    <Img src={props.infoProducto.pictureUrl} className="h-5 w-auto" />
                 <Body className="card-body_background" >
-                    <Img src={`${props.infoProducto.pictureUrl}`} />
                     <Title className="text-center" >{props.infoProducto.title} </Title>
                     <Text>{props.infoProducto.description} </Text>
                     <Text>Precio: {props.infoProducto.price} </Text>

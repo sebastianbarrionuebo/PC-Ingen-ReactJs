@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react"
+import { useParams } from 'react-router-dom'
 import ItemDetail from "./ItemDetail"
-import { useParams } from 'react-router-dom';
+import ScreenLoad from "./ScreenLoad"
 import procesadores from "../DataBase/procesadoresAMD.json"
-import Athom from "../Assets/Athom.png"
-import Ryzen3 from "../Assets/Ryzen3.png"
-import Ryzen5 from "../Assets/Ryzen5.png"
-import Ryzen7 from "../Assets/Ryzen7.png"
 
 const ItemDetailContainer = () => {
     {/*const [datosAPI, setdatosAPI] = useState(null)
@@ -49,7 +46,7 @@ const ItemDetailContainer = () => {
                     <ItemDetail info={datosProducto} />
                 </>
                 :
-                <div>Cargando </div>
+                <ScreenLoad/>
             }
         </>
     );

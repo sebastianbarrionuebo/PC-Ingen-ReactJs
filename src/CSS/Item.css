@@ -1,4 +1,6 @@
-.card{
+.item-container_padding{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .card-body_background{
     background-color: rgb(141, 139, 139);
@@ -10,4 +12,19 @@
 .pading{
     padding-left: 150px;
     padding-right: 150px;
+}
+.material-icons_size{
+    font-size: 3em;
+    animation-name: rotation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
 }

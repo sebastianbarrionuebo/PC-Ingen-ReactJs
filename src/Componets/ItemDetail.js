@@ -15,8 +15,6 @@ const ItemDetail = (props) => {
 
 
     const cantidadProductos = (cantidad) => {
-        //console.log(cantidad)
-        //console.log(props.info)
         const productoElegido = {
             id:props.info.id,
             title:props.info.title,
@@ -28,7 +26,6 @@ const ItemDetail = (props) => {
         const carritoTemp = carrito
         carritoTemp.push(productoElegido)
         setCarrito(carritoTemp)
-        console.log(carrito)
     }
 
 

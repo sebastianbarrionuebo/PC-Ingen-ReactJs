@@ -1,0 +1,21 @@
+.bg-color{
+    background-color: #697179;
+}
+.card-padding{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.card-style:hover{
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.466) !important;
+    transition: all 0.7s linear;
+}
+.card-img-overflow{
+    overflow: hidden;
+}
+.card-img-style{
+    padding-top: 1em;
+    transition: all o.3s ease-in-out;
+}
+.card-img-style:hover{
+    transform: scale(1.5);
+}

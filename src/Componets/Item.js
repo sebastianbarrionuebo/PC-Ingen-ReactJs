@@ -10,7 +10,9 @@ const Item = (props) => {
     return (
         <>
             <Card className="bg-secondary" >
-                    <Img src={props.infoProducto.pictureUrl} className="h-5 w-auto" />
+                <div className="text-center">
+                    <Img src={props.infoProducto.pictureUrl} className="pt-3 pb-3" style={{ width: '11rem' }}/>
+                </div>
                 <Body className="card-body_background" >
                     <Title className="text-center" >{props.infoProducto.title} </Title>
                     <Text>{props.infoProducto.description} </Text>

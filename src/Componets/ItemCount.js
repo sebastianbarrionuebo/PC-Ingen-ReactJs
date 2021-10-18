@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container"
 
 
 const ItemCount = ({ stock, initial, add}) => {
-    const [contador, setContador] = useState(initial);
+    const [contador, setContador] = useState(1);
     
     
     const sumar = () => {

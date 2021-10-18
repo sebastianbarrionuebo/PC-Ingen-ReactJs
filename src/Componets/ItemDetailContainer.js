@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const pidiendoDatosALaAPI = new Promise((res,rej)=>{
             setTimeout(() => { //Simula pedido a una API
-                const producto = procesadores.find(producto => producto.id == id)
+                const producto = procesadores.find(producto => producto.id === id)
                 res(producto)
             },2000)
         })

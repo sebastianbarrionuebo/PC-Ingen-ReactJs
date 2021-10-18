@@ -1,18 +1,14 @@
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Card from "react-bootstrap/Card"
-import ItemCount from "./ItemCount"
-import {CartContext} from "./CartContext"
+import { Card, Row, Col } from "react-bootstrap"
+import { contexto } from "./CustomProvider";
 import { useContext } from "react"
+import ItemCount from "./ItemCount"
 import "../CSS/Item.css"
 
 const {Body,Img,Footer,Text,Title,} = Card
 
 const ItemDetail = (props) => {
 
-    const [carrito,setCarrito] = useContext(CartContext)
-
+    const {isInCarrito} = useContext(contexto)
 
     const cantidadProductos = (cantidad) => {
         const productoElegido = {
@@ -23,13 +19,8 @@ const ItemDetail = (props) => {
             categoria:props.info.categoria,
             cantidad:cantidad
         }
-        const carritoTemp = carrito
-        carritoTemp.push(productoElegido)
-        setCarrito(carritoTemp)
+        isInCarrito(productoElegido)
     }
-
-
-
 
     return (
         <>

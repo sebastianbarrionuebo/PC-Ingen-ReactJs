@@ -1,35 +1,19 @@
-import Card from "react-bootstrap/Card"
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { useContext, useEffect, useState } from "react";
-import { CartContext } from "./CartContext";
+import { Row, Col, Button, Card } from "react-bootstrap";
+import { useContext } from "react";
+import { contexto } from "./CustomProvider";
 import "../CSS/cart.css"
 
 const {Body,Text,Footer,Title,} = Card
 
 const Cart = () => {
-    const [carrito, setCarrito] = useContext(CartContext)
-    const [total, setTotal] = useState(0)
+    const {carrito,borrar,limpiar,total} = useContext(contexto)
 
-    useEffect(() => {
-        let total = 0
-        carrito.map((item) => {
-            total = total + item.price;
-        })
-        setTotal(total)
-    },[])
-
-    function borrar(num) {
-        let carritoModifi = carrito
-        const objBorrar = carritoModifi.find(c => c.id === num)
-        let index = carritoModifi.indexOf(objBorrar)
-        carritoModifi.splice(index,1)
-        setCarrito(carritoModifi)
+    function borrarProducto(prop){
+        borrar(prop)
     }
 
-    function limpiar() {
-        let carritoModifi = carrito
-        carritoModifi = []
-        setCarrito(carritoModifi)
+    function limpiarProducto() {
+        limpiar()
     }
 
     return (
@@ -49,7 +33,7 @@ const Cart = () => {
                                         <Text className="pt-2 pb-2">Precio: {item.cantidad * item.price}</Text>
                                     </Body>
                                     <Footer>
-                                        <Button onClick={()=>{borrar(item.id)}} >Borrar</Button>
+                                        <Button onClick={()=>{borrarProducto(item.id)}} >Borrar</Button>
                                     </Footer>
                                 </Col>
                             </Row>
@@ -60,7 +44,7 @@ const Cart = () => {
             <h2 className=" text-center">Total: {total} </h2>
             <Row>
                 <Col className="text-center pb-2">
-                    <Button onClick={limpiar} >Limpiar carrito</Button>
+                    <Button onClick={limpiarProducto} >Limpiar carrito</Button>
                 </Col>
             </Row>
         </>

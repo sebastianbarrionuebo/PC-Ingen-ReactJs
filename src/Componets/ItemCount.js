@@ -1,12 +1,10 @@
+import { Container, Row, Col, Button} from "react-bootstrap"
+import { Link } from 'react-router-dom';
 import { useState } from "react"
-import Button from  "react-bootstrap/Button"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Container from "react-bootstrap/Container"
-
+import "../CSS/itemCount.css"
 
 const ItemCount = ({ stock, initial, add}) => {
-    const [contador, setContador] = useState(1);
+    const [contador, setContador] = useState(initial);
     
     
     const sumar = () => {
@@ -22,11 +20,13 @@ const ItemCount = ({ stock, initial, add}) => {
 
     const addCarrito = () => {
         add(contador)
+        document.getElementById("obj1").style.display = "none"
+        document.getElementById("obj2").style.display = "block"
     }
 
     return (
-        <>
-            <Container>
+        <> 
+            <Container id="obj1">
                 <Row>
                     <Col>
                         <p className="text-center">El contador va: {contador}</p>
@@ -43,6 +43,16 @@ const ItemCount = ({ stock, initial, add}) => {
                 <Row>
                     <Col className="text-center pb-2">
                         <Button variant="dark" onClick={addCarrito}>onAdd</Button>
+                    </Col>
+                </Row>
+            </Container>
+            <Container id="obj2" className="oculto-contenedor ">
+                <Row>
+                    <Col className="text-center" >
+                        <Link className="btn btn-dark" to="/Category/1" >Seguir comprando</Link>
+                    </Col>
+                    <Col className="text-center" >
+                        <Link className="btn btn-dark" to="/Cart" >Ir al carrto</Link>
                     </Col>
                 </Row>
             </Container>

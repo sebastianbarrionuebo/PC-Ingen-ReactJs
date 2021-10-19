@@ -6,14 +6,14 @@ import "../CSS/cart.css"
 const {Body,Text,Footer,Title,} = Card
 
 const Cart = () => {
-    const {carrito,borrar,limpiar,total} = useContext(contexto)
+    const {carrito,borrarProducto,limpiarCarrito,total} = useContext(contexto)
 
-    function borrarProducto(prop){
-        borrar(prop)
+    function borrar(prop){
+        borrarProducto(prop)
     }
 
-    function limpiarProducto() {
-        limpiar()
+    function limpiarProductos() {
+        limpiarCarrito()
     }
 
     return (
@@ -33,7 +33,7 @@ const Cart = () => {
                                         <Text className="pt-2 pb-2">Precio: {item.cantidad * item.price}</Text>
                                     </Body>
                                     <Footer>
-                                        <Button onClick={()=>{borrarProducto(item.id)}} >Borrar</Button>
+                                        <Button onClick={()=>{borrar(item.id)}} >Borrar</Button>
                                     </Footer>
                                 </Col>
                             </Row>
@@ -44,7 +44,7 @@ const Cart = () => {
             <h2 className=" text-center">Total: {total} </h2>
             <Row>
                 <Col className="text-center pb-2">
-                    <Button onClick={limpiarProducto} >Limpiar carrito</Button>
+                    <Button onClick={limpiarProductos} >Limpiar carrito</Button>
                 </Col>
             </Row>
         </>

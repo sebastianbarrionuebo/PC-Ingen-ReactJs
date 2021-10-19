@@ -282,4 +282,20 @@ ENRUTADOR:
 
 
 
+        RENDERIZADO
+
+Memorizacion: Son soluciones para que un componente no se renreize innecezaramente
+
+useMemo: Memoriza  una variable dentro de un componente si y solo si esa variable no es una funcion.
+useCallback: Memoriza una variable dentro de un componente. Si y solo si esa variable es una funcion.
+memo (HoC): Memoriza uncomponente y te da dos cosas: 
+    1_ Lo fuerza a que solo se reejecute por propso estado.
+    2_ Le da control manual al render del componente.
+
+
+
+01:56:57
+
+
+
 

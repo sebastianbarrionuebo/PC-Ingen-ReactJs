@@ -8,7 +8,7 @@ const {Body,Img,Footer,Text,Title,} = Card
 
 const ItemDetail = (props) => {
 
-    const {isInCarrito} = useContext(contexto)
+    const {nuevoProducto} = useContext(contexto)
 
     const cantidadProductos = (cantidad) => {
         const productoElegido = {
@@ -19,7 +19,7 @@ const ItemDetail = (props) => {
             categoria:props.info.categoria,
             cantidad:cantidad
         }
-        isInCarrito(productoElegido)
+        nuevoProducto(productoElegido)
     }
 
     return (

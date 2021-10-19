@@ -20,8 +20,8 @@ const ItemCount = ({ stock, initial, add}) => {
 
     const addCarrito = () => {
         add(contador)
-        document.getElementById("obj1").style.display = "none"
-        document.getElementById("obj2").style.display = "block"
+        //document.getElementById("obj1").style.display = "none"
+        //document.getElementById("obj2").style.display = "block"
     }
 
     return (

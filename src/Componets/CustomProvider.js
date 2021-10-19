@@ -12,10 +12,10 @@ const CustomProvider = ({children}) => {
 
     const valorContexto = {
         carrito,
-        borrar,
-        limpiar,
+        borrarProducto,
+        limpiarCarrito,
         total,
-        isInCarrito,
+        nuevoProducto,
         numObjetos
     }
 
@@ -31,23 +31,38 @@ const CustomProvider = ({children}) => {
     },[total])
 
     function isInCarrito(prop) {
-        let carrito2 = carrito
-        let objBuscado = carrito2.find(c => c.id === prop.id)
+        let status
+        let objBuscado = carrito.find(c => c.id === prop.id)
         if (objBuscado === undefined) {
-            nuevoProducto(prop)
-        } else if ( prop.cantidad != carrito2.cantidad) {
-                borrar(prop.id)
-                nuevoProducto(prop)
+            status = false
+        } else {
+            status = true
+        }
+        return {status,objBuscado}
+    }
+
+    function nuevoProducto(prop) {
+        let estado = isInCarrito(prop)
+        if ( estado.status === true )  {
+            if ( estado.objBuscado.cantidad !== prop.cantidad ){
+                borrarProducto(estado.objBuscado.cantidad)
+                const carritoTemp = carrito
+                carritoTemp.push(prop)
+                setCarrito(carritoTemp)
+            } else {
+                alert("El objeto con esta cantidad ya se encuentra en el carrito")
             }
+        } else {
+            const carritoTemp = carrito
+            carritoTemp.push(prop)
+            setCarrito(carritoTemp)
+        }
     }
 
-    function nuevoProducto(prop){
-        const carritoTemp = carrito
-        carritoTemp.push(prop)
-        setCarrito(carritoTemp)
-    }
 
-    function borrar(num) {
+
+
+    function borrarProducto(num) {
         let carritoModifi = carrito
         const objBorrar = carritoModifi.find(c => c.id === num)
         let index = carritoModifi.indexOf(objBorrar)
@@ -55,10 +70,8 @@ const CustomProvider = ({children}) => {
         setCarrito(carritoModifi)
     }
 
-    function limpiar() {
-        let carritoModifi = carrito
-        carritoModifi = []
-        setCarrito(carritoModifi)
+    function limpiarCarrito() {
+        setCarrito([])
     }
 
     return (

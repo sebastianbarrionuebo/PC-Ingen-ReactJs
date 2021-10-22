@@ -1,6 +1,6 @@
 import { Card, Row, Col } from "react-bootstrap"
+import { memo, useContext } from "react"
 import { contexto } from "./CustomProvider";
-import { useContext } from "react"
 import ItemCount from "./ItemCount"
 import "../CSS/Item.css"
 
@@ -45,4 +45,4 @@ const ItemDetail = (props) => {
     );
 }
 
-export default ItemDetail;
+export default memo(ItemDetail);

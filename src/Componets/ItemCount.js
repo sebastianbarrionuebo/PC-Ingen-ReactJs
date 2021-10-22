@@ -1,11 +1,10 @@
 import { Container, Row, Col, Button} from "react-bootstrap"
 import { Link } from 'react-router-dom';
 import { useState } from "react"
-import "../CSS/itemCount.css"
 
 const ItemCount = ({ stock, initial, add}) => {
     const [contador, setContador] = useState(initial);
-    
+    const [select, setSelect] = useState(true)
     
     const sumar = () => {
         if ((contador >= 0) && (contador < stock)) {
@@ -20,13 +19,13 @@ const ItemCount = ({ stock, initial, add}) => {
 
     const addCarrito = () => {
         add(contador)
-        //document.getElementById("obj1").style.display = "none"
-        //document.getElementById("obj2").style.display = "block"
+        setSelect(false)
     }
 
     return (
         <> 
-            <Container id="obj1">
+            { select ?
+            <Container>
                 <Row>
                     <Col>
                         <p className="text-center">El contador va: {contador}</p>
@@ -46,7 +45,8 @@ const ItemCount = ({ stock, initial, add}) => {
                     </Col>
                 </Row>
             </Container>
-            <Container id="obj2" className="oculto-contenedor ">
+            :
+            <Container>
                 <Row>
                     <Col className="text-center" >
                         <Link className="btn btn-dark" to="/Category/1" >Seguir comprando</Link>
@@ -56,6 +56,7 @@ const ItemCount = ({ stock, initial, add}) => {
                     </Col>
                 </Row>
             </Container>
+            }
         </>
     );
 }

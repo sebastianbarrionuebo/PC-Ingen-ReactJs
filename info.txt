@@ -295,7 +295,14 @@ memo (HoC): Memoriza uncomponente y te da dos cosas:
 
 
 01:56:57
+vercel servidor
 
 
+DIFERENCIAS:
 
+RELACIONAL          //              NO RELACIONAL
 
+DB                                  DB
+TABLAS                              COLECTION
+COLUMNAS                            PROPIEDADES
+REGISTROS                           DOCUMENTOS (son simil json)

@@ -1,0 +1,38 @@
+[
+    {
+        "marca": "Intel",
+        "producto": "Celeron",
+        "precio": 9300,
+        "stock": 30
+    },
+    {
+        "marca": "Intel",
+        "producto": "Pentium",
+        "precio": 17000,
+        "stock": 40
+    },
+    {
+        "marca": "Intel",
+        "producto": "I3",
+        "precio": 25000,
+        "stock": 40
+    },
+    {
+        "marca": "Intel",
+        "producto": "I5",
+        "precio": 31000,
+        "stock": 30
+    },
+    {
+        "marca": "Intel",
+        "producto": "I7",
+        "precio": 46000,
+        "stock": 40
+    },
+    {
+        "marca": "Intel",
+        "producto": "I9",
+        "precio": 69000,
+        "stock": 40
+    }
+]

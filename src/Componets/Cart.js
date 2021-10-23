@@ -1,12 +1,21 @@
 import { Row, Col, Button, Card } from "react-bootstrap";
-import { memo, useContext } from "react";
+import { memo, useContext, useState, useEffect } from "react";
 import { contexto } from "./CustomProvider";
 import "../CSS/cart.css"
 
 const {Body,Text,Footer,Title,} = Card
 
 const Cart = () => {
-    const {carrito,borrarProducto,limpiarCarrito,total} = useContext(contexto)
+    const {carrito,borrarProducto,limpiarCarrito} = useContext(contexto)
+    const [total, setTotal] = useState(0)
+
+    useEffect(() => {
+        let tot = 0
+        carrito.map((item) => {
+            tot = tot + (item.price * item.cantidad);
+        })
+        setTotal(tot)
+    },[carrito])
 
     function borrar(prop){
         borrarProducto(prop)
@@ -18,7 +27,7 @@ const Cart = () => {
 
     return (
         <>
-            {( carrito !== [] ) ?
+            { carrito ?
                     (<>
                         {carrito.map((item) => {
                             return(
@@ -45,7 +54,7 @@ const Cart = () => {
                         })}
                     </>)
                 :
-                    (<p>Carrito vacio</p>)
+                    (<p className="text-center" >Carrito vacio</p>)
             }
             <h2 className=" text-center">Total: {total} </h2>
             <Row>

@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useCallback, useMemo } from "react";
+import { createContext, useState } from "react";
 
 export const contexto = createContext()
 
@@ -7,28 +7,13 @@ const {Provider} = contexto
 const CustomProvider = ({children}) => {
 
     const [carrito, setCarrito] = useState([])
-    const [total, setTotal] = useState(0)
-    const [numObjetos, setnumObjetos] = useState(0)
 
     const valorContexto = {
         carrito,
         borrarProducto,
         limpiarCarrito,
-        total,
-        nuevoProducto,
-        numObjetos
+        nuevoProducto
     }
-
-    useEffect(() => {
-        let tot = 0
-        let num = 0
-        carrito.map((item) => {
-            tot = tot + item.price;
-            num = num + item.cantidad;
-        })
-        setTotal(total)
-        setnumObjetos(numObjetos)
-    },[total])
 
     function isInCarrito(prop) {
         let status
@@ -71,9 +56,6 @@ const CustomProvider = ({children}) => {
             setCarrito(carritoModifi)
         }
     }
-
-    //const borrarProductoMemoria = useCallback(borrarProducto,[carrito])
-    
 
     function limpiarCarrito() {
         setCarrito([])

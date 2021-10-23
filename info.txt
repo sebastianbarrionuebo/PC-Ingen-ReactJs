@@ -284,7 +284,7 @@ ENRUTADOR:
 
         RENDERIZADO
 
-Memorizacion: Son soluciones para que un componente no se renreize innecezaramente
+Memorizacion: Son soluciones para que un componente no se rerenderize innecezaramente
 
 useMemo: Memoriza  una variable dentro de un componente si y solo si esa variable no es una funcion.
 useCallback: Memoriza una variable dentro de un componente. Si y solo si esa variable es una funcion.

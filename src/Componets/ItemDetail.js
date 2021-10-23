@@ -23,7 +23,7 @@ const ItemDetail = (props) => {
     }
 
     return (
-        <>
+        <div className="detail-contenedor" >
             <Card key={props.info.id} className="bg-secondary">
                 <Row>
                     <Col sm={4} md={4} lg={4} className="pt-4" sm={{order: 'last'}}  >
@@ -41,7 +41,7 @@ const ItemDetail = (props) => {
                     <ItemCount stock={props.info.stock} initial={1} add={cantidadProductos} />
                 </Footer>
             </Card>
-        </>
+        </div>
     );
 }
 

@@ -27,8 +27,8 @@ const Cart = () => {
 
     return (
         <>
-            { carrito ?
-                    (<>
+            { total ?
+                    (<div className="cart-container" >
                         {carrito.map((item) => {
                             return(
                                 <div className="card-padding" >
@@ -52,9 +52,9 @@ const Cart = () => {
                                 </div>
                             )
                         })}
-                    </>)
+                    </div>)
                 :
-                    (<p className="text-center" >Carrito vacio</p>)
+                    (<p className="carritoVacio-style" >Carrito vacio</p>)
             }
             <h2 className=" text-center">Total: {total} </h2>
             <Row>

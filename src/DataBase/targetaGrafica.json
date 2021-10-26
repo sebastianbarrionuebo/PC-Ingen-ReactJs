@@ -1,0 +1,105 @@
+[   
+    {
+        "marca": "EVGA",
+        "producto": "Geforce GT210 1GB",
+        "precio": 5200,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce GT 710",
+        "precio": 7600,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce GT 730",
+        "precio": 13800,
+        "stock": 30
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "Geforce GT 1030",
+        "precio": 25900,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "Geforce GTX 1050ti",
+        "precio": 48700,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce GTX 1650",
+        "precio": 60600,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "Geforce GTX 1660",
+        "precio": 83000,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "Geforce RTX 2060",
+        "precio": 94000,
+        "stock": 30
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "Radeon RX 570",
+        "precio": 105000,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce RTX 3060",
+        "precio": 135900,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce RTX 3060ti",
+        "precio": 150000,
+        "stock": 30
+    },
+    {
+        "marca": "EVGA",
+        "producto": "Geforce RTX 3070",
+        "precio": 189000,
+        "stock": 30
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "Geforce RTX 3070ti",
+        "precio": 220000,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce RTX 3080",
+        "precio": 225000,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Radeon RX 6800",
+        "precio": 243600,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "Radeon RX 6900XT",
+        "precio": 340500,
+        "stock": 30
+    },
+    {
+        "marca": "MSI",
+        "producto": "Geforce RTX 3090",
+        "precio": 359000,
+        "stock": 30
+    },
+    {"hasta": "ID 24 - "}
+]

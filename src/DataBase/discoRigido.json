@@ -1,0 +1,92 @@
+[
+    {
+        "marca": "Toshiba",
+        "producto": "7200RPM 1TB",
+        "precio": 4900,
+        "stock": 30
+    },
+    {
+        "marca": "Seagate",
+        "producto": "Barracuda 1TB",
+        "precio": 5100,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Blue 1TB",
+        "precio": 5200,
+        "stock": 30
+    },
+    {
+        "marca": "Seagate",
+        "producto": "Barracuda 2TB",
+        "precio": 6700,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Blue 2TB",
+        "precio": 7300,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Purple 3TB",
+        "precio": 12100,
+        "stock": 30
+    },
+    {
+        "marca": "Seagate",
+        "producto": "Barracuda 4TB",
+        "precio": 13000,
+        "stock": 30
+    },
+    {
+        "marca": "Seagate",
+        "producto": "Barracuda 6TB",
+        "precio": 22100,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Purple 6TB",
+        "precio": 22800,
+        "stock": 30
+    },
+    {
+        "marca": "Toshiba",
+        "producto": "Performance 6TB",
+        "precio": 25800,
+        "stock": 30
+    },
+    {
+        "marca": "Seagate",
+        "producto": "Barracuda 8TB",
+        "precio": 29500,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Purple 8TB",
+        "precio": 34000,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Purple 10TB",
+        "precio": 38000,
+        "stock": 30
+    },
+    {
+        "marca": "WD",
+        "producto": "Purple 14TB",
+        "precio": 68800,
+        "stock": 30
+    },
+    {
+        "marca": "Seagate",
+        "producto": "Skyhawk 18TB",
+        "precio": 72000,
+        "stock": 30
+    }
+]

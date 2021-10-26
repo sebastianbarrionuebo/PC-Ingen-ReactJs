@@ -1,0 +1,116 @@
+[
+    {
+        "marca": "Aerocool",
+        "producto": "Split Black",
+        "precio": 3300,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "producto": "Versa H15",
+        "precio": 4000,
+        "stock": 30
+    },
+    {
+        "marca": "Aerocool",
+        "producto": "Prime",
+        "precio": 4200,
+        "stock": 30
+    },
+    {
+        "marca": "Acer",
+        "producto": "F785",
+        "precio": 4600,
+        "stock": 30
+    },
+    {
+        "marca": "Sentey",
+        "producto": "S20",
+        "precio": 4800,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "producto": "Versa H17",
+        "precio": 5000,
+        "stock": 30
+    },
+    {
+        "marca": "Acer",
+        "producto": "AX6-B",
+        "precio": 6300,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "producto": "Versa T25",
+        "precio": 6600,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "Carbide",
+        "precio": 6700,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "Carbide 100R",
+        "precio": 7700,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "producto": "H350",
+        "precio": 7900,
+        "stock": 30
+    },
+    {
+        "marca": "Sentey",
+        "producto": "T20",
+        "precio": 8100,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "Carbide Delta",
+        "precio": 8200,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "producto": "H100",
+        "precio": 9100,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "470T",
+        "precio": 9900,
+        "stock": 30
+    },
+    {
+        "marca": "Coolermaster",
+        "producto": "MB511",
+        "precio": 13300,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "ICUE 400X",
+        "precio": 15300,
+        "stock": 30
+    },
+    {
+        "marca": "Coolermaster",
+        "producto": "MB530",
+        "precio": 19000,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "ICUE 5000X",
+        "precio": 24100,
+        "stock": 30
+    }
+]

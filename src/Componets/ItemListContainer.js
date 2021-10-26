@@ -1,19 +1,20 @@
-import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
-import ScreenLoad from "./ScreenLoad"
 import { firestore } from "./firebase"
+import { useParams } from 'react-router-dom'
+import ItemList from "./ItemList"
+import ScreenLoad from "./ScreenLoad"
 
 const ItemListContainer = () => {
 
     const [datosProductos, setdatosProductos] = useState(null)
+    const {id} = useParams()
 
     useEffect(() => {
-        const collection = firestore.collection("Productos")
+        const collection = firestore.collection(`Productos`)
         //Hago la consulta. Metodos(get-where-doc-add)
         const query = collection.get()
         query
             .then((resultado) => {
-                console.log("Todo esta bien")
                 const documentos = resultado.docs
                 const array_final_de_productos = []
                 documentos.forEach(producto => {

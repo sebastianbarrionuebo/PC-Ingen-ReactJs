@@ -31,7 +31,7 @@ const CustomProvider = ({children}) => {
     }
 
     function nuevoProducto(prop) {
-        const carritoTemp = carrito
+        const carritoTemp = [...carrito]
         let estado = isInCarrito(prop)
         if ( estado.status === 1 ) {
             carritoTemp.push(prop)
@@ -48,7 +48,7 @@ const CustomProvider = ({children}) => {
     }
 
     function borrarProducto(num) {
-        let carritoModifi = carrito
+        let carritoModifi = [...carrito]
         const objBorrar = carritoModifi.find(c => c.id === num)
         if ( objBorrar !== undefined ) {
             let index = carritoModifi.indexOf(objBorrar)

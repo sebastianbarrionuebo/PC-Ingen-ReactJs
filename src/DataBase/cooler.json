@@ -1,0 +1,86 @@
+[
+    {
+        "marca": "Aerocool",
+        "producto": "Cyclon 3 RGB",
+        "precio": 4800,
+        "stock": 30
+    },
+    {
+        "marca": "Coolermaster",
+        "producto": "ML120L V2",
+        "precio": 10500,
+        "stock": 30
+    },
+    {
+        "marca": "Aerocool",
+        "producto": "Mirage L120",
+        "precio": 11800,
+        "stock": 30
+    },
+    {
+        "marca": "Coolermaster",
+        "producto": "ML240L V2",
+        "precio": 17000,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "Hydro H60",
+        "precio": 17500,
+        "stock": 30
+    },
+    {
+        "marca": "Coolermaster",
+        "producto": "ML120R",
+        "precio": 21500,
+        "stock": 30
+    },
+    {
+        "marca": "EVGA",
+        "producto": "CLC 240",
+        "precio": 23500,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "TUF LC",
+        "precio": 24000,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "ICUE H100I",
+        "precio": 29000,
+        "stock": 30
+    },
+    {
+        "marca": "EVGA",
+        "producto": "CLC 360",
+        "precio": 32700,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "ROG RYUO",
+        "precio": 47700,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "H150I",
+        "precio": 39300,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "ROG RYUJIN",
+        "precio": 69800,
+        "stock": 30
+    },
+    {
+        "marca": "Aerocool",
+        "producto": "Mirage L120",
+        "precio": 11800,
+        "stock": 30
+    }
+]

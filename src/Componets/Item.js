@@ -22,7 +22,7 @@ const Item = (props) => {
                 <Footer className="card-footer_background">
                     <Row className="p-2">
                         <Col className="text-center">
-                            <Link to={`/item/${props.infoProducto.id}`} className="btn btn-dark" >Mas informacion</Link>
+                            <Link to={`/item/${props.infoProducto.to}`} className="btn btn-dark" >Mas informacion</Link>
                         </Col>
                     </Row>
                 </Footer>

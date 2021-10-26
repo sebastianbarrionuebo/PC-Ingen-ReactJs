@@ -1,7 +1,6 @@
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import CartWidget from './CartWidget';
+import { Container, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
 
 const {Item} = Nav
 
@@ -14,7 +13,7 @@ const NavItems = () => {
                         <Link to="/">Home</Link>
                     </Item>
                     <Item className="p-1">
-                        <Link to="/Category/1">Store</Link>
+                        <Link to="/Store">Store</Link>
                     </Item>
                     <Item className="p-1">
                         <Link to="/Cart"><CartWidget/></Link>

@@ -1,0 +1,81 @@
+[
+    {
+        "marca": "Thermaltake",
+        "modelo": "SmartWhite 500W",
+        "precio": 5400,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "modelo": "Lite Power 550W",
+        "precio": 5900,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "VS500 500W",
+        "precio": 7100,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "CV550 550W",
+        "precio": 7200,
+        "stock": 30
+    },
+    {
+        "marca": "EVGA",
+        "producto": "Plus White W2 500W",
+        "precio": 7300,
+        "stock": 30
+    },
+    {
+        "marca": "Gigabyte",
+        "producto": "Plus Bronce 550W",
+        "precio": 7500,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "VS600 600W",
+        "precio": 7700,
+        "stock": 30
+    },
+    {
+        "marca": "EVGA",
+        "producto": "Plus White 600W",
+        "precio": 8600,
+        "stock": 30
+    },
+    {
+        "marca": "Thermaltake",
+        "producto": "SmartWhite 80+ 700W",
+        "precio": 8700,
+        "stock": 30
+    },
+    {
+        "marca": "Gigabyte",
+        "producto": "Plus Gold 750W",
+        "precio": 14500,
+        "stock": 30
+    },
+    {
+        "marca": "EVGA",
+        "producto": "700BR 700W",
+        "precio": 14600,
+        "stock": 30
+    },
+    {
+        "marca": "Corsair",
+        "producto": "CX750F 750W",
+        "precio": 17100,
+        "stock": 30
+    },
+    {
+        "marca": "Gigabyte",
+        "producto": "P859GM 850W",
+        "precio": 17700,
+        "stock": 30
+    },
+    {"hasta": "ID 11 - 23"}
+]

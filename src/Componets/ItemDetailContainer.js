@@ -7,15 +7,14 @@ import { firestore } from "./firebase"
 const ItemDetailContainer = () => {
 
     const [datosProducto, setdatosProducto] = useState(null)
-
     const {id} = useParams()
+    const to = id
 
     useEffect(() => {
         const collection = firestore.collection("Productos")
         const query = collection.get()
         query
             .then((resultado) => {
-                console.log("Todo esta bien")
                 const documentos = resultado.docs
                 const array_final_de_productos = []
                 documentos.forEach(producto => {
@@ -24,7 +23,7 @@ const ItemDetailContainer = () => {
                     const producto_final = {id,...el_resto}
                     array_final_de_productos.push(producto_final)
                 });
-                const producto = array_final_de_productos.find(producto => producto.id === id)
+                const producto = array_final_de_productos.find(producto => producto.to === to)
                 setdatosProducto(producto)
             })
             .catch((error) => {

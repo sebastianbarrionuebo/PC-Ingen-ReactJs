@@ -1,0 +1,158 @@
+[
+    {
+        "marca": "ASUS",
+        "producto": "B450M-A II Prime",
+        "precio": 9500,
+        "stock": 50
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "B450M AM4",
+        "precio": 10700,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "A520M PRO4",
+        "precio": 10900,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "B450M Steel Legend",
+        "precio": 12200,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "B450 Elite",
+        "precio": 13700,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "B550 Phantom4",
+        "precio": 14800,
+        "stock": 30
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "A520 Elite AM4",
+        "precio": 14800,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "B450-F Rog Strix II",
+        "precio": 17000,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "B550M DS3H AC",
+        "precio": 17500,
+        "stock": 40
+    },
+    {
+        "marca": "ASUS",
+        "producto": "X570-P Prime",
+        "precio": 20500,
+        "stock": 30
+    },
+    {
+        "marca": "ASUS",
+        "producto": "B550M PRO-P AM4",
+        "precio": 22200,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "B550 Steel Legend",
+        "precio": 25500,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "X570 X",
+        "precio": 25600,
+        "stock": 40
+    },
+    {
+        "marca": "ASUS",
+        "producto": "B550-A Rog Strix",
+        "precio": 27600,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "B550 elite",
+        "precio": 28600,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "B550 Extreme4",
+        "precio": 28900,
+        "stock": 40
+    },
+    {
+        "marca": "ASUS",
+        "producto": "X570-Plus",
+        "precio": 30000,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "B550 PG",
+        "precio": 30200,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "X570 Steel",
+        "precio": 32500,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "X570 Elite",
+        "precio": 33900,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "X570 PG",
+        "precio": 37900,
+        "stock": 40
+    },
+    {
+        "marca": "ASUS",
+        "producto": "B550-E AM4 Rog Strix",
+        "precio": 39500,
+        "stock": 40
+    },
+    {
+        "marca": "ASROCK",
+        "producto": "X570 Taichi",
+        "precio": 41400,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "B550 Master 1.0",
+        "precio": 48100,
+        "stock": 40
+    },
+    {
+        "marca": "GIGABYTE",
+        "producto": "X570 I PRO Wifi",
+        "precio": 52200,
+        "stock": 40
+    },
+    {
+        "marca": "ASUS",
+        "producto": "CROSSHAIR VIII Hero Dark",
+        "precio": 61900,
+        "stock": 40
+    }
+]

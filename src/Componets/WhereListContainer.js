@@ -12,8 +12,9 @@ const Procesadores = () => {
     useEffect(() => {
         const collection = firestore.collection(`Productos`)
         //Hago la consulta. Metodos(get-where-doc-add)
-        const procesadoresQuery = collection.where(`category`, `==`, `${id}`)
-        procesadoresQuery.get()
+        const query = collection.where(`category`, `==`, `${id}`)
+        query.orderBy("price", "desc")
+        query.get()
             .then((resultado) => {
                 const documentos = resultado.docs
                 const array_final_de_productos = []

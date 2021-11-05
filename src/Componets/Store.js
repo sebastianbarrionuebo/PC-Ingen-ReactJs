@@ -2,7 +2,7 @@ import ItemListContainer from "./ItemListContainer"
 import NavStore from "./NavStore"
 import { Route, Switch } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
-import CollectionWhere from "./CollectionWhere";
+import WhereListContainer from "./WhereListContainer"
 
 
 const Store = () => {
@@ -15,7 +15,7 @@ const Store = () => {
                 <Row>
                     <Switch >
                         <Route path="/Store" component={ItemListContainer} exact />
-                        <Route path="/productos/:id" component={CollectionWhere} exact />
+                        <Route path="/productos/:id" component={WhereListContainer} exact />
                     </Switch>
                 </Row>
             </Container>

@@ -1,6 +1,8 @@
 import { Row, Col, Button, Card } from "react-bootstrap";
 import { memo, useContext, useState, useEffect } from "react";
 import { contexto } from "./CustomProvider";
+import { firestore } from "./firebase"
+import { Link } from 'react-router-dom';
 import "../CSS/cart.css"
 
 const {Body,Text,Footer,Title,} = Card
@@ -24,6 +26,21 @@ const Cart = () => {
 
     function limpiarProductos() {
         limpiarCarrito()
+    }
+
+    function guardarOrden() {
+        const ordenDeCompra = {
+            buyer : {
+                name : "Seba",
+                phone : "123124235",
+                email : "asdasd"
+            },
+            item : carrito,
+            //date : firestore.timestamp.now(),
+            totalFinal : total
+        }
+        const colection = firestore.collection("ordenes")
+        colection.add(ordenDeCompra)
     }
 
     return (
@@ -54,9 +71,13 @@ const Cart = () => {
                             )
                         })}
                         <h2 className=" text-center">Total: {total} </h2>
-                        <Row>
+                        <Row className="text-center">
                             <Col className="text-center pb-2">
                                 <Button onClick={limpiarProductos} >Limpiar carrito</Button>
+                            </Col>
+                            <Col>
+                                <Button onClick={guardarOrden} >Finalizar compra</Button>
+                                <Link to="/Formulario" >Finalizar compra</Link>
                             </Col>
                         </Row>
                     </div>)

@@ -16,7 +16,7 @@ const ItemDetail = (props) => {
             title:props.info.title,
             price:props.info.price,
             pictureUrl:props.info.pictureUrl,
-            categoria:props.info.categoria,
+            category:props.info.category,
             cantidad:cantidad
         }
         nuevoProducto(productoElegido)

@@ -112,5 +112,6 @@
         "producto": "ICUE 5000X",
         "precio": 24100,
         "stock": 30
-    }
+    },
+    {"hasta": "ID 95 - 113"}
 ]

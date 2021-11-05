@@ -88,5 +88,6 @@
         "producto": "Skyhawk 18TB",
         "precio": 72000,
         "stock": 30
-    }
+    },
+    {"hasta": "ID 80 - 94"}
 ]

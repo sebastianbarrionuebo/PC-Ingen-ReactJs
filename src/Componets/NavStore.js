@@ -7,14 +7,14 @@ const {Item} = Nav
 const NavStore = () => {
     return ( 
             <Nav className = "justify-content-center bg-dark" variant="tabs">
-                <Item className="item-style" ><Link to="/catalogo/Productos"> Procesadores </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/motherboards"> Motherboards </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/graficas"> Targetas Graficas </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/ram"> Memoria RAM </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/fuentes"> Fuentes </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/discorigidos"> Discos Rigidos </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/coolers"> Coolers </Link></Item>
-                <Item className="item-style" ><Link to="/catalogo/gabnetes"> Gabinetes </Link></Item>
+                <Item className="item-style" ><Link to="/productos/procesadores"> Procesadores </Link></Item>
+                <Item className="item-style" ><Link to="/productos/mothers"> Motherboards </Link></Item>
+                <Item className="item-style" ><Link to="/productos/graficas"> Targetas Graficas </Link></Item>
+                <Item className="item-style" ><Link to="/productos/ram"> Memoria RAM </Link></Item>
+                <Item className="item-style" ><Link to="/productos/fuentes"> Fuentes </Link></Item>
+                <Item className="item-style" ><Link to="/productos/rigidos"> Discos Rigidos </Link></Item>
+                <Item className="item-style" ><Link to="/productos/coolers"> Coolers </Link></Item>
+                <Item className="item-style" ><Link to="/productos/gabinetes"> Gabinetes </Link></Item>
             </Nav>
     );
 }

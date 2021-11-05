@@ -27,7 +27,7 @@ const Header = () => {
                     </Navbar>
                 </Row>
                 <Row>
-                    <NavStore/>
+                    {/*<NavStore/>*/}
                 </Row>
         </Container>
     )

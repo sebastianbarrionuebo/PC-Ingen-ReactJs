@@ -9,8 +9,6 @@ const CartWidget = () => {
     const [objCarrito, setObjCarrito] = useState(0)
 
     useEffect(() => {
-        console.log("Objetos carrito")
-        console.log(objCarrito)
         let num = 0
         carrito.map((item) => {
             num = num + item.cantidad;

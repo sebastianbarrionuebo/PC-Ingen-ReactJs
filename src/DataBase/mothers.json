@@ -154,5 +154,6 @@
         "producto": "CROSSHAIR VIII Hero Dark",
         "precio": 61900,
         "stock": 40
-    }
+    },
+    {"hasta": "ID 40 - 65"}
 ]

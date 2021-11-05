@@ -17,17 +17,17 @@ const CustomProvider = ({children}) => {
 
     function isInCarrito(prop) {
         let status
-        let objBuscado = carrito.find(c => c.id === prop.id)
-        if (objBuscado === undefined) {
+        let objEnCarrito = carrito.find(c => c.id === prop.id)
+        if (objEnCarrito === undefined) {
             status = 1
         } else {
-            if ( objBuscado.cantidad !== prop.cantidad ) {
+            if ( objEnCarrito.cantidad !== prop.cantidad ) {
                 status = 2
             } else {
                 status = 3
             }
         }
-        return {status,objBuscado}
+        return {status,objEnCarrito}
     }
 
     function nuevoProducto(prop) {
@@ -38,22 +38,27 @@ const CustomProvider = ({children}) => {
             setCarrito(carritoTemp)
         } else {
             if ( estado.status === 2 ) {
-                borrarProducto(estado.objBuscado.id)
-                carritoTemp.push(prop)
-                setCarrito(carritoTemp)
+                const task = "agregar"
+                const carritoConObjBorrado = borrarProducto(estado.objEnCarrito.id, task)
+                carritoConObjBorrado.push(prop)
+                setCarrito(carritoConObjBorrado)
             } else {
                 alert("Producto se encuentra en el carrito")
             }
         }
     }
 
-    function borrarProducto(num) {
+    function borrarProducto(num,task) {
         let carritoModifi = [...carrito]
         const objBorrar = carritoModifi.find(c => c.id === num)
-        if ( objBorrar !== undefined ) {
-            let index = carritoModifi.indexOf(objBorrar)
-            carritoModifi.splice(index,1)
+        let index = carritoModifi.indexOf(objBorrar)
+        carritoModifi.splice(index,1)
+        if ( task === "borrar" ) {
             setCarrito(carritoModifi)
+        } else {
+            if ( task === "agregar" ) {
+                return(carritoModifi)
+            }
         }
     }
 

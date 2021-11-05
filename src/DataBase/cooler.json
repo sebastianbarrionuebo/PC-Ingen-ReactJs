@@ -15,7 +15,8 @@
         "marca": "Aerocool",
         "producto": "Mirage L120",
         "precio": 11800,
-        "stock": 30
+        "stock": 30,
+        "id": 68
     },
     {
         "marca": "Coolermaster",
@@ -82,5 +83,6 @@
         "producto": "Mirage L120",
         "precio": 11800,
         "stock": 30
-    }
+    },
+    {"hasta": "ID 66 - 79"}
 ]

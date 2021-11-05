@@ -18,7 +18,8 @@ const Cart = () => {
     },[carrito])
 
     function borrar(prop){
-        borrarProducto(prop)
+        const task = "borrar"
+        borrarProducto(prop, task)
     }
 
     function limpiarProductos() {
@@ -52,16 +53,16 @@ const Cart = () => {
                                 </div>
                             )
                         })}
+                        <h2 className=" text-center">Total: {total} </h2>
+                        <Row>
+                            <Col className="text-center pb-2">
+                                <Button onClick={limpiarProductos} >Limpiar carrito</Button>
+                            </Col>
+                        </Row>
                     </div>)
                 :
                     (<p className="carritoVacio-style" >Carrito vacio</p>)
             }
-            <h2 className=" text-center">Total: {total} </h2>
-            <Row>
-                <Col className="text-center pb-2">
-                    <Button onClick={limpiarProductos} >Limpiar carrito</Button>
-                </Col>
-            </Row>
         </>
     );
 }

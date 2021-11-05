@@ -5,6 +5,7 @@ import Cart from "./Cart";
 import Coming from "./Coming"
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
+import Store from "./Store";
 
 const Main = () => {
     return (
@@ -14,9 +15,8 @@ const Main = () => {
                     <Row>
                         <Switch >
                             <Route path="/" component={Home} exact />
-                            <Route path="/Store" component={ItemListContainer} exact />
+                            <Route path="/Store" component={Store} exact />
                             <Route path="/Item/:id" component={ItemDetailContainer} exact />
-                            <Route path="/catalogo/:id" component={ItemListContainer} exact />
                             <Route path="/Cart" component={Cart} exact />
                         </Switch>
                     </Row>

@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react"
+import { useParams } from "react-router"
 import { firestore } from "./firebase"
 import ItemList from "./ItemList"
 import ScreenLoad from "./ScreenLoad"
 
-const ItemListContainer = () => {
+const Procesadores = () => {
 
-    const [datosProductos, setdatosProductos] = useState(null)
+    const [datosProcesadores, setdatosProcesadores] = useState(null)
+    const {id} = useParams()
 
     useEffect(() => {
         const collection = firestore.collection(`Productos`)
         //Hago la consulta. Metodos(get-where-doc-add)
-        const query = collection.get()
-        query
+        const procesadoresQuery = collection.where(`category`, `==`, `${id}`)
+        procesadoresQuery.get()
             .then((resultado) => {
                 const documentos = resultado.docs
                 const array_final_de_productos = []
@@ -21,19 +23,19 @@ const ItemListContainer = () => {
                     const producto_final = {id,...el_resto}
                     array_final_de_productos.push(producto_final)
                 });
-                setdatosProductos(array_final_de_productos)
+                setdatosProcesadores(array_final_de_productos)
             })
             .catch((error) => {
-                console.log(error)
+                console.log("Error obteniendo documentos: ", error)
             })
     },[])
 
     return (
         <>
-            {datosProductos ?
+            {datosProcesadores ?
                 <>
                     <div className="item-container_padding">
-                        <ItemList info={datosProductos} />
+                        <ItemList info={datosProcesadores} />
                     </div>
                 </>
                 :
@@ -43,4 +45,4 @@ const ItemListContainer = () => {
     );
 }
 
-export default ItemListContainer;
+export default Procesadores;

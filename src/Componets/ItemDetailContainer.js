@@ -8,7 +8,6 @@ const ItemDetailContainer = () => {
 
     const [datosProducto, setdatosProducto] = useState(null)
     const {id} = useParams()
-    const to = id
 
     useEffect(() => {
         const collection = firestore.collection("Productos")
@@ -23,7 +22,7 @@ const ItemDetailContainer = () => {
                     const producto_final = {id,...el_resto}
                     array_final_de_productos.push(producto_final)
                 });
-                const producto = array_final_de_productos.find(producto => producto.to === to)
+                const producto = array_final_de_productos.find(producto => producto.to === id)
                 setdatosProducto(producto)
             })
             .catch((error) => {

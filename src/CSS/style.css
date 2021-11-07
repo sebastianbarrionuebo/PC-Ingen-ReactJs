@@ -1,9 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
 body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
     background: rgb(149,126,209);
     background: radial-gradient(circle, rgba(149,126,209,1) 0%, rgba(42,43,78,1) 85%);
 }
 main{
-    margin-top: 80px;
 }
 footer{
     color: white;

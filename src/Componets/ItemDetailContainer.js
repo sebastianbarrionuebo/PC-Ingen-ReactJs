@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
+import { Container } from "react-bootstrap";
 import { useParams } from 'react-router-dom'
 import { firestore } from "./firebase"
 import ItemDetail from "./ItemDetail"
 import ScreenLoad from "./ScreenLoad"
+import "../CSS/itemDetail.css"
 
 const ItemDetailContainer = () => {
 
@@ -25,9 +27,9 @@ const ItemDetailContainer = () => {
     return (
         <>
             {datosProducto ?
-                <>
+                <Container className="detail--contenedor">
                     <ItemDetail info={datosProducto} />
-                </>
+                </Container>
                 :
                 <ScreenLoad/>
             }

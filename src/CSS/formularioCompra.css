@@ -1,0 +1,39 @@
+.form--style{
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+}
+.form--text__width{
+    width: 18.8em;
+}
+.form--phone__width{
+    width: 18.8em;
+}
+.button--centrado{
+    text-align: center;
+}
+@media (max-width: 320px) {
+    .form--text__width{
+        width: 14.8em;
+    }
+    .form--phone__width{
+        width: 14.8em;
+    }
+}
+@media (min-width: 1024px) {
+    .form--text__width{
+        width: 32.8em;
+        height: 3em;
+    }
+    .form--phone__width{
+        width: 32.8em;
+        height: 3em;
+    }
+}

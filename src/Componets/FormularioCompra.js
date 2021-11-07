@@ -1,18 +1,45 @@
+import { useState } from "react"
+import { Container, Row } from "react-bootstrap"
+import "../CSS/formularioCompra.css"
 
 
-const FormularioCompra = () => {
+const FormularioCompra = ({orden}) => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [phone, setPhone] = useState()
+
+    const enviarPedido = () => {
+        console.log("Se envia formulario")
+        const buyerData = { name, email, phone }
+        orden(buyerData)
+    }
+
     return (
         <>
-            
-            <form action="">
-                <label htmlFor=""></label>
-                <input name="firstName" type="text" />
-
-                <label htmlFor=""></label>
-                <input type="email" />
-
-                <label htmlFor=""></label>
-                <input type="phone" />
+            <h2>Rellene los campos para finalizar la compra</h2>
+            <form onSubmit={enviarPedido}>
+                <Container>
+                    <Row className="pb-3 pt-3" >
+                        <div className="form--centrado">
+                            <input id="name" className="form--text__width form--style" type="text" name="Nombre" placeholder="Ingrese su Nombre" onChange={(e) => setName(e.target.value)} required/>
+                        </div>
+                    </Row>
+                    <Row className="pb-3 pt-3" >
+                        <div className="form--centrado">
+                            <input id="email" className="form--text__width form--style" type="text" name="Email" placeholder="Ingrese su email" onChange={(e) => setEmail(e.target.value)} required/>
+                        </div>
+                    </Row>
+                    <Row className="pb-3 pt-3" >
+                        <div className="form--centrado">
+                            <input id="phone" className="form--phone__width form--style" type="number" name="Telefono" placeholder="Ingrese su telefono" onChange={(e) => setPhone(e.target.value)} required/>
+                        </div>
+                    </Row>
+                    <Row className="pb-3 pt-3" >
+                        <div className="button--centrado">
+                            <input type="submit" className="btn btn-primary" value="Realizar pedido"/>
+                        </div>
+                    </Row>
+                </Container>
             </form>
         </>
     );

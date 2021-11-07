@@ -1,8 +1,9 @@
-import { Row, Col, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { memo, useContext, useState, useEffect } from "react";
 import { contexto } from "./CustomProvider";
 import { firestore } from "./firebase"
-import { Link } from 'react-router-dom';
+import firebase from "firebase/app"
+import FormularioCompra from "./FormularioCompra"
 import "../CSS/cart.css"
 
 const {Body,Text,Footer,Title,} = Card
@@ -28,15 +29,11 @@ const Cart = () => {
         limpiarCarrito()
     }
 
-    function guardarOrden() {
+    const guardarOrden = (buyerData) => {
         const ordenDeCompra = {
-            buyer : {
-                name : "Seba",
-                phone : "123124235",
-                email : "asdasd"
-            },
+            buyer : buyerData,
             item : carrito,
-            //date : firestore.timestamp.now(),
+            date : firebase.firestore.Timestamp.now(),
             totalFinal : total
         }
         const colection = firestore.collection("ordenes")
@@ -44,47 +41,54 @@ const Cart = () => {
     }
 
     return (
-        <>
+        <Container fluid={true}>
             { total ?
-                    (<div className="cart-container" >
-                        {carrito.map((item) => {
-                            return(
-                                <div className="card-padding" >
-                                    <Card key={item.id} className="card-style bg-secondary ">
-                                        <Row>
-                                            <Col sm={4} md={4} lg={4}  sm={{order: 'last'}} className="card-img-overflow bg-color text-center pt-4" >
-                                                <img src={item.pictureUrl} style={{ width: '9rem' }} className="card-img-style"  alt="" />
-                                            </Col>
-                                            <Col sm={8} md={8} lg={8} sm={{order: 'first'}} >
-                                                <Body className=" text-center">
-                                                    <Title className="pt-2 pb-3">{item.title}</Title>
-                                                    <Text>Has selecionado "{item.cantidad}" unidades de esteproducto </Text>
-                                                    <Text className="pt-2 pb-2">Precio: {item.cantidad * item.price}</Text>
-                                                </Body>
-                                                <Footer>
-                                                    <Button onClick={()=>{borrar(item.id)}} >Borrar</Button>
-                                                </Footer>
-                                            </Col>
-                                        </Row>
-                                    </Card>
-                                </div>
-                            )
-                        })}
-                        <h2 className=" text-center">Total: {total} </h2>
-                        <Row className="text-center">
-                            <Col className="text-center pb-2">
+                    (<>
+                        <Container className="carrito--container__padding">
+                            {carrito.map((item) => {
+                                return(
+                                    <Row key={item.id} className="card__padding" >
+                                        <Card className="card-style bg-secondary ">
+                                            <Row>
+                                                <Col sm={4} md={4} lg={4}  sm={{order: 'last'}} className="card--img__overflow bg-color text-center pt-4" >
+                                                    <img src={item.pictureUrl} style={{ width: '9rem' }} className="card--img__style"  alt="" />
+                                                </Col>
+                                                <Col sm={8} md={8} lg={8} sm={{order: 'first'}} >
+                                                    <Body className=" text-center">
+                                                        <Title className="pt-2 pb-3">{item.title}</Title>
+                                                        <Text>Has selecionado "{item.cantidad}" unidades de esteproducto </Text>
+                                                        <Text className="pt-2 pb-2">Precio: {item.cantidad * item.price}</Text>
+                                                    </Body>
+                                                    <Footer>
+                                                        <Button onClick={()=>{borrar(item.id)}} >Borrar</Button>
+                                                    </Footer>
+                                                </Col>
+                                            </Row>
+                                        </Card>
+                                    </Row>
+                                )
+                            })}
+                        </Container>
+                        <Row className="total--container__padding">
+                            <Col sm={3}>
+                            </Col>
+                            <Col sm={3} className="text-center pb-2">
                                 <Button onClick={limpiarProductos} >Limpiar carrito</Button>
                             </Col>
-                            <Col>
-                                <Button onClick={guardarOrden} >Finalizar compra</Button>
-                                <Link to="/Formulario" >Finalizar compra</Link>
+                            <Col sm={3} className="text-center pb-2">
+                                <h2 className=" text-center">Total: ${total} </h2>
+                            </Col>
+                            <Col sm={3}>
                             </Col>
                         </Row>
-                    </div>)
+                        <Row className="cart--form__container text-center">
+                            <FormularioCompra orden={guardarOrden} />
+                        </Row>
+                    </>)
                 :
                     (<p className="carritoVacio-style" >Carrito vacio</p>)
             }
-        </>
+        </Container>
     );
 }
 

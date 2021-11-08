@@ -2,13 +2,12 @@ import { Card, Row, Col } from "react-bootstrap"
 import { memo, useContext } from "react"
 import { contexto } from "./CustomProvider";
 import ItemCount from "./ItemCount"
+import ItemCarousel from "./ItemCarousel"
 import "../CSS/itemDetail.css"
 
-
-const {Body,Img,Footer,Text,Title,} = Card
+const { Body, Footer, Text, Title } = Card
 
 const ItemDetail = (props) => {
-
     const {nuevoProducto} = useContext(contexto)
 
     const cantidadProductos = (cantidad) => {
@@ -27,7 +26,7 @@ const ItemDetail = (props) => {
             <Card key={props.info.id} className="bg-secondary">
                 <Row>
                     <Col sm={4} md={4} lg={4} className="pt-4" sm={{order: 'last'}}  >
-                        <Img src={props.info.pictureUrl}/>
+                        <ItemCarousel props={props.info.pictureUrl}/>
                     </Col>
                     <Col sm={8} md={8} lg={8} sm={{order: 'first'}} >
                         <Body>

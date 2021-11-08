@@ -1,18 +1,18 @@
-import { Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import Item from "./Item"
 import "../CSS/Item.css"
 
 
 const ItemList = (props) => {
     return (
-        <Row>
+        <Container>
             { props.info.map(producto => (
-                    <Col sm={6} md={4} lg={3} className="pt-3" key={producto.id}>
+                    <div className="pt-3 pl-5 pr-5" key={producto.id}>
                         <Item infoProducto={producto} ></Item>
-                    </Col>
+                    </div>
                 )) 
             }
-        </Row>
+        </Container>
     );
 }
 

@@ -1,8 +1,10 @@
-.card--body__background{
+.card--body{
     background-color: rgb(141, 139, 139);
     border-color: rgb(141, 139, 139);
+    font-size: 1.4em;
 }
-.card--footer__background{
+.card--footer{
+    text-align: center;
     background-color: rgb(82, 80, 80);
 }
 .material-icons_size{

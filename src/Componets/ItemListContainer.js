@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router"
 import { firestore } from "./firebase"
-import { Container } from 'react-bootstrap';
 import ItemList from "./ItemList"
 import ScreenLoad from "./ScreenLoad"
 import "../CSS/Item.css"
@@ -42,9 +41,7 @@ const ItemListContainer = () => {
     return (
         <>
             {datosProductos ?
-                <Container >
-                    <ItemList info={datosProductos} />
-                </Container>
+                <ItemList info={datosProductos} />
                 :
                 <ScreenLoad/>
             }

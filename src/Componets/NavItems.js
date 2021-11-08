@@ -13,6 +13,9 @@ const NavItems = () => {
                         <Link to="/">Home</Link>
                     </Item>
                     <Item className="p-1">
+                        <Link to="/Armado">Armado</Link>
+                    </Item>
+                    <Item className="p-1">
                         <Link to="/Store">Store</Link>
                     </Item>
                     <Item className="p-1">

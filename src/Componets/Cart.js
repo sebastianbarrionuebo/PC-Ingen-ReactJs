@@ -44,7 +44,7 @@ const Cart = () => {
         <Container fluid={true}>
             { total ?
                     (<>
-                        <Container className="carrito--container__padding">
+                        <div className="cart--container__padding">
                             {carrito.map((item) => {
                                 return(
                                     <Row key={item.id} className="card__padding" >
@@ -68,22 +68,24 @@ const Cart = () => {
                                     </Row>
                                 )
                             })}
-                        </Container>
-                        <Row className="total--container__padding">
-                            <Col sm={3}>
-                            </Col>
-                            <Col sm={3} className="text-center pb-2">
-                                <Button onClick={limpiarProductos} >Limpiar carrito</Button>
-                            </Col>
-                            <Col sm={3} className="text-center pb-2">
-                                <h2 className=" text-center">Total: ${total} </h2>
-                            </Col>
-                            <Col sm={3}>
-                            </Col>
-                        </Row>
-                        <Row className="cart--form__container text-center">
-                            <FormularioCompra orden={guardarOrden} />
-                        </Row>
+                        </div>
+                            <Row className="total--container__padding">
+                                <Col sm={3}>
+                                </Col>
+                                <Col sm={3} className="text-center pb-2">
+                                    <Button onClick={limpiarProductos} >Limpiar carrito</Button>
+                                </Col>
+                                <Col sm={3} className="text-center pb-2">
+                                    <h2 className=" text-center">Total: ${total} </h2>
+                                </Col>
+                                <Col sm={3}>
+                                </Col>
+                            </Row>
+                            <Row className="text-center">
+                                <div className="cart--form__container">
+                                    <FormularioCompra orden={guardarOrden} />
+                                </div>
+                            </Row>
                     </>)
                 :
                     (<p className="carritoVacio-style" >Carrito vacio</p>)

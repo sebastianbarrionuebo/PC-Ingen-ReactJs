@@ -1,8 +1,10 @@
 .bg-color{
     background-color: #697179;
 }
-.carrito--container__padding{
+.cart--container__padding{
     padding-top: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 .total--container__padding{
     padding-top: 1em;
@@ -11,8 +13,8 @@
 .cart--form__container{
     color: white;
     background-color: rgb(38, 38, 148);
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
     border-top-style: solid;
     border-top-color: rgba(0, 0, 0, 0.466);
     box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.466) !important;

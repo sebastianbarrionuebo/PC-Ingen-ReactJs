@@ -36,7 +36,7 @@ const Footer = () => {
                             <Col className="text-center" >
                                 <h4>Ubicacion</h4>
                                 <hr />
-
+                                
                             </Col>
                         </Row>
                         <Row className="separator-botton">

@@ -8,10 +8,10 @@ const FormularioCompra = ({orden}) => {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState()
 
-    const enviarPedido = () => {
+    const enviarPedido = (event) => {
         console.log("Se envia formulario")
         const buyerData = { name, email, phone }
-        orden(buyerData)
+        orden(event, buyerData)
     }
 
     return (
@@ -36,7 +36,7 @@ const FormularioCompra = ({orden}) => {
                     </Row>
                     <Row className="pb-3 pt-3" >
                         <div className="button--centrado">
-                            <input type="submit" className="btn btn-primary" value="Realizar pedido"/>
+                            <input type="submit" className="btn btn-primary" value="Realizar pedido" />
                         </div>
                     </Row>
                 </Container>

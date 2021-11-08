@@ -29,7 +29,7 @@ const Cart = () => {
         limpiarCarrito()
     }
 
-    const guardarOrden = (buyerData) => {
+    const guardarOrden = (event, buyerData) => {
         const ordenDeCompra = {
             buyer : buyerData,
             item : carrito,
@@ -38,6 +38,7 @@ const Cart = () => {
         }
         const colection = firestore.collection("ordenes")
         colection.add(ordenDeCompra)
+        event.preventDefault();
     }
 
     return (

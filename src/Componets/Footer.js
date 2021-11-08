@@ -33,11 +33,6 @@ const Footer = () => {
                                     <Row className="pt-2 pb-2" ><Link to="/Category/1" >Store</Link></Row>
                                 </Container>
                             </Col>
-                            <Col className="text-center" >
-                                <h4>Ubicacion</h4>
-                                <hr />
-                                
-                            </Col>
                         </Row>
                         <Row className="separator-botton">
                             <p className="text-center" >Copyrigth 2021 - Barrionuebo Sebastian</p>

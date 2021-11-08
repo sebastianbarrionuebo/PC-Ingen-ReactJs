@@ -7,7 +7,7 @@ const ItemList = (props) => {
     return (
         <Container>
             { props.info.map(producto => (
-                    <div className="pt-3 pl-5 pr-5" key={producto.id}>
+                    <div className="pt-4 pl-5 pr-5" key={producto.id}>
                         <Item infoProducto={producto} ></Item>
                     </div>
                 )) 

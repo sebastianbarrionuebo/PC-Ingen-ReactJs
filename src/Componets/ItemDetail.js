@@ -23,7 +23,7 @@ const ItemDetail = (props) => {
     }
 
     return (
-            <Card key={props.info.id} className="bg-secondary">
+            <Card key={props.info.id} className="bg-secondary card--container__style">
                 <Row>
                     <Col sm={4} md={4} lg={4} className="pt-4" sm={{order: 'last'}}  >
                         <ItemCarousel props={props.info.pictureUrl}/>

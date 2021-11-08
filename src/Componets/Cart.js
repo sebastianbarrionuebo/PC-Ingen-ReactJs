@@ -48,7 +48,7 @@ const Cart = () => {
                             {carrito.map((item) => {
                                 return(
                                     <Row key={item.id} className="card__padding" >
-                                        <Card className="card-style bg-secondary ">
+                                        <Card className=" bg-secondary ">
                                             <Row>
                                                 <Col sm={4} md={4} lg={4}  sm={{order: 'last'}} className="card--img__overflow bg-color text-center pt-4" >
                                                     <img src={item.pictureUrl} style={{ width: '9rem' }} className="card--img__style"  alt="" />

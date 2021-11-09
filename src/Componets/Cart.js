@@ -36,8 +36,8 @@ const Cart = () => {
             date : firebase.firestore.Timestamp.now(),
             totalFinal : total
         }
-        const colection = firestore.collection("ordenes")
-        colection.add(ordenDeCompra)
+        //const colection = firestore.collection("ordenes")
+        //colection.add(ordenDeCompra)
         event.preventDefault();
     }
 

@@ -4,8 +4,8 @@ import { contexto } from "./CustomProvider";
 import { firestore } from "./firebase"
 import firebase from "firebase/app"
 import FormularioCompra from "./FormularioCompra"
-import "../CSS/cart.css"
 import ReciboContainer from "./ReciboContainer";
+import "../CSS/cart.css"
 
 const {Body,Text,Footer,Title,} = Card
 
@@ -42,10 +42,15 @@ const Cart = () => {
         }
         const colection = firestore.collection("Ordenes")
         colection.add(ordenCompra)
-
-        setEstadoDeCompra(false)
-        setOrdenDeCompra(ordenCompra)
-
+            .then((docRef) => {
+                const recibo = docRef.id
+                const carrito_final = {recibo,...ordenCompra}
+                setOrdenDeCompra(carrito_final)
+                setEstadoDeCompra(false)
+            })
+            .catch((error) => {
+                console.error("Error agregando datos: ", error)
+            })
         event.preventDefault();
     }
 

@@ -1,0 +1,13 @@
+.recibo--container__style{
+    color: white;
+    text-align: center;
+    padding: 0.9rem 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: rgb(38, 38, 148);
+    background-clip: padding-box;
+    border: 1px solid #022344;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+}

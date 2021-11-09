@@ -1,54 +1,22 @@
-import { Container, Row } from "react-bootstrap"
-import { useState, useEffect } from "react";
-import { firestore } from "./firebase"
+import { Row } from "react-bootstrap"
+import "../CSS/reciboContainer.css"
 
 
 const ReciboContainer = ({props}) => {
-    const [data, setData] = useState({})
-
-    console.log(props.buyer)
-    console.log(props.item)
-    console.log(props.date)
-
-    useEffect(() => {
-        const collection = firestore.collection(`ordenes`)
-        const query = collection.where(`buyer`, `==`, `${props.buyer}`)
-        query.where(`item`, `==`, `${props.item}`)
-        query.where(`date`, `==`, `${props.date}`)
-        query.where(`totalFinal`, `==`, `${props.totalFinal}`)
-        query.get()
-            .then((resultado) => {
-                const documentos = resultado.docs
-                const array_final_de_productos = []
-                console.log("dentro del llamado")
-                documentos.forEach(producto => {
-                    const ident = producto.id
-                    const el_resto = producto.data()
-                    const producto_final = {ident,...el_resto}
-                    console.log("Este es el id")
-                    console.log(producto_final)
-                    array_final_de_productos = producto_final
-                })
-                setData(array_final_de_productos)
-            })
-            .catch((error) => {
-                console.log("Error obteniendo documentos: ", error)
-            })
-    },[props])
 
     return (
-        <div className="text-center">
+        <div className="recibo--container__style">
             <Row>
-                <h2>Gracias por su compra!</h2>
+                <h2 className="pt-2 pb-2">Gracias por su compra!</h2>
             </Row>
             <Row>
-                <p>Este es su recibo:</p>
+                <p className="pt-2 pb-2">Este es su recibo:</p>
             </Row>
             <Row>
-                <p>Nombre: </p>
-                <p>Email: </p>
-                <p>Telefono: </p>
-                <p>Numero de pedido: </p>
+                <p>Nombre: {props.buyer.name} </p>
+                <p>Email: {props.buyer.email}</p>
+                <p>Telefono: {props.buyer.phone}</p>
+                <p>Numero de pedido: {props.recibo}</p>
             </Row>
             <Row>
                 

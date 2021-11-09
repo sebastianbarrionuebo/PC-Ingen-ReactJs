@@ -12,7 +12,9 @@ const {Body,Text,Footer,Title,} = Card
 const Cart = () => {
     const {carrito,borrarProducto,limpiarCarrito} = useContext(contexto)
     const [total, setTotal] = useState(0)
-    const [estadoCompra, setEstadoCompra] = useState(false)
+    const [estadoDeCompra, setEstadoDeCompra] = useState(true)
+    const [ordenDeCompra, setOrdenDeCompra] = useState({})
+
 
     useEffect(() => {
         let tot = 0
@@ -32,14 +34,18 @@ const Cart = () => {
     }
 
     const guardarOrden = (event, buyerData) => {
-        const ordenDeCompra = {
+        const ordenCompra = {
             buyer : buyerData,
             item : carrito,
             date : firebase.firestore.Timestamp.now(),
             totalFinal : total
         }
-        //const colection = firestore.collection("ordenes")
-        //colection.add(ordenDeCompra)
+        const colection = firestore.collection("Ordenes")
+        colection.add(ordenCompra)
+
+        setEstadoDeCompra(false)
+        setOrdenDeCompra(ordenCompra)
+
         event.preventDefault();
     }
 
@@ -85,17 +91,17 @@ const Cart = () => {
                             </Col>
                         </Row>
                         <Row className="text-center">
-                            <div className="cart--form__container">
-                                <FormularioCompra orden={guardarOrden} />
-                            </div>
+                            { estadoDeCompra ?
+                                <div className="cart--form__container">
+                                    <FormularioCompra orden={guardarOrden} />
+                                </div>
+                                :
+                                <ReciboContainer props={ordenDeCompra} />
+                            }
                         </Row>
                     </>)
                 :
-                    { estadoCompra ?
-                            (<p className="carritoVacio-style" >Carrito vacio</p>)
-                        :
-                            (<ReciboContainer/>)
-                    }
+                    (<p className="carritoVacio-style" >Carrito vacio</p>)
             }
         </Container>
     );

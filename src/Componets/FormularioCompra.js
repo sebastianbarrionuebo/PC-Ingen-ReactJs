@@ -37,7 +37,7 @@ const FormularioCompra = ({orden}) => {
                     </Row>
                     <Row className="pb-3 pt-3" >
                         <div className="button--centrado">
-                            <input type="submit" className="btn btn-primary">Realizar pedido</input>
+                            <input type="submit" className="btn btn-primary" value="Realizar pedido"></input>
                         </div>
                     </Row>
                 </Container>

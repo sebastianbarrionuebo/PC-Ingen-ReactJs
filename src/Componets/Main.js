@@ -4,7 +4,6 @@ import Cart from "./Cart";
 import ItemDetailContainer from "./ItemDetailContainer";
 import StoreContainer from "./StoreContainer";
 import Coming from "./Coming"
-import ReciboContainer from "./ReciboContainer";
 
 const Main = () => {
     return (
@@ -15,7 +14,6 @@ const Main = () => {
                 <Route path="/Item/:id" component={ItemDetailContainer} exact />
                 <Route path="/Cart" component={Cart} exact />
                 <Route path="/Armado" component={Coming} exact />
-                <Route path="/Recibo" component={ReciboContainer} exact />
             </Switch>
         </main>
     );

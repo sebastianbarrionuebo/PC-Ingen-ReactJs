@@ -5,12 +5,14 @@ import { firestore } from "./firebase"
 import firebase from "firebase/app"
 import FormularioCompra from "./FormularioCompra"
 import "../CSS/cart.css"
+import ReciboContainer from "./ReciboContainer";
 
 const {Body,Text,Footer,Title,} = Card
 
 const Cart = () => {
     const {carrito,borrarProducto,limpiarCarrito} = useContext(contexto)
     const [total, setTotal] = useState(0)
+    const [estadoCompra, setEstadoCompra] = useState(false)
 
     useEffect(() => {
         let tot = 0
@@ -70,26 +72,30 @@ const Cart = () => {
                                 )
                             })}
                         </div>
-                            <Row className="total--container__padding">
-                                <Col sm={3}>
-                                </Col>
-                                <Col sm={3} className="text-center pb-2">
-                                    <Button onClick={limpiarProductos} >Limpiar carrito</Button>
-                                </Col>
-                                <Col sm={3} className="text-center pb-2">
-                                    <h2 className=" text-center">Total: ${total} </h2>
-                                </Col>
-                                <Col sm={3}>
-                                </Col>
-                            </Row>
-                            <Row className="text-center">
-                                <div className="cart--form__container">
-                                    <FormularioCompra orden={guardarOrden} />
-                                </div>
-                            </Row>
+                        <Row className="total--container__padding">
+                            <Col sm={3}>
+                            </Col>
+                            <Col sm={3} className="text-center pb-2">
+                                <Button onClick={limpiarProductos} >Limpiar carrito</Button>
+                            </Col>
+                            <Col sm={3} className="text-center pb-2">
+                                <h2 className=" text-center">Total: ${total} </h2>
+                            </Col>
+                            <Col sm={3}>
+                            </Col>
+                        </Row>
+                        <Row className="text-center">
+                            <div className="cart--form__container">
+                                <FormularioCompra orden={guardarOrden} />
+                            </div>
+                        </Row>
                     </>)
                 :
-                    (<p className="carritoVacio-style" >Carrito vacio</p>)
+                    { estadoCompra ?
+                            (<p className="carritoVacio-style" >Carrito vacio</p>)
+                        :
+                            (<ReciboContainer/>)
+                    }
             }
         </Container>
     );

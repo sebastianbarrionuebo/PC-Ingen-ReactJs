@@ -1,5 +1,5 @@
-import { useState } from "react"
 import { Container, Row } from "react-bootstrap"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import "../CSS/formularioCompra.css"
 
@@ -37,7 +37,7 @@ const FormularioCompra = ({orden}) => {
                     </Row>
                     <Row className="pb-3 pt-3" >
                         <div className="button--centrado">
-                            <input type="submit" className="btn btn-primary" value="Realizar pedido"><Link to="/Recibo" /></input>
+                            <input type="submit" className="btn btn-primary">Realizar pedido</input>
                         </div>
                     </Row>
                 </Container>

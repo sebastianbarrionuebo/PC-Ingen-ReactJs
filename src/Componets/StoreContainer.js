@@ -9,13 +9,14 @@ const Store = () => {
 
     return (
         <Container fluid={true}>
+            <h2>Esto es la Store</h2>
             <Row>
                 <NavStore/>
             </Row>
             <Row className="container--items__padding">
                 <Switch >
-                    <Route path="/Store" component={ItemListContainer} exact />
-                    <Route path={`${path}/:id`} component={ItemListContainer} exact><ItemListContainer /></Route>
+                    <Route path={path} component={ItemListContainer} exact />
+                    <Route path={`${path}/:id`} ><ItemListContainer /></Route>
                 </Switch>
             </Row>
         </Container>

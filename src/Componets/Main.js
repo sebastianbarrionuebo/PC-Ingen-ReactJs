@@ -8,6 +8,7 @@ import Coming from "./Coming"
 const Main = () => {
     return (
         <main>
+            <h2>Esto es el main</h2>
             <Switch >
                 <Route path="/" component={Home} exact />
                 <Route path="/Store" component={StoreContainer} exact />

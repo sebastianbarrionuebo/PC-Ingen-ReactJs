@@ -1,5 +1,5 @@
-import { Nav } from 'react-bootstrap';
 import { Link, useRouteMatch } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 import "../CSS/navStore.css"
 
 const {Item} = Nav

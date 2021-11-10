@@ -40,9 +40,9 @@ const ItemListContainer = () => {
     return (
         <>
             {datosProductos ?
-                <ItemList info={datosProductos} />
+                    <ItemList info={datosProductos} />
                 :
-                <ScreenLoad/>
+                    <ScreenLoad/>
             }
         </>
     );

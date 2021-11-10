@@ -7,24 +7,22 @@ const {Item} = Nav
 
 const NavItems = () => {
     return (
-        <>
-            <Container>
-                <Nav className="justify-content-end">
-                    <Item className="p-1">
-                        <Link className="nav--link__style" to="/">Home</Link>
-                    </Item>
-                    <Item className="p-1">
-                        <Link className="nav--link__style" to="/Armado">Armado</Link>
-                    </Item>
-                    <Item className="p-1">
-                        <Link className="nav--link__style" to="/Store">Store</Link>
-                    </Item>
-                    <Item className="p-1">
-                        <Link className="nav--link__style" to="/Cart"><CartWidget/></Link>
-                    </Item>
-                </Nav>
-            </Container>
-        </>
+        <Container>
+            <Nav className="justify-content-end">
+                <Item className="p-1">
+                    <Link className="nav--link__style" to="/">Home</Link>
+                </Item>
+                <Item className="p-1">
+                    <Link className="nav--link__style" to="/Armado">Armado</Link>
+                </Item>
+                <Item className="p-1">
+                    <Link className="nav--link__style" to="/Store">Store</Link>
+                </Item>
+                <Item className="p-1">
+                    <Link className="nav--link__style" to="/Cart"><CartWidget/></Link>
+                </Item>
+            </Nav>
+        </Container>
     );
 }
 

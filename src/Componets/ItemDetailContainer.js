@@ -7,7 +7,6 @@ import ScreenLoad from "./ScreenLoad"
 import "../CSS/itemDetail.css"
 
 const ItemDetailContainer = () => {
-
     const [datosProducto, setdatosProducto] = useState(null)
     const {id} = useParams()
 

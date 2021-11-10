@@ -10,14 +10,13 @@ const CartWidget = () => {
 
     useEffect(() => {
         let num = 0
-        carrito.map((item) => {
+        carrito.forEach((item) => {
             num = num + item.cantidad;
         })
         setObjCarrito(num)
     },[carrito])
 
     return (
-        <> 
             <Row>
                 <Col sm={4} >
                     <p className="material-icons color2"> shopping_cart</p>
@@ -26,7 +25,6 @@ const CartWidget = () => {
                     <p className="carrito-objetos">({objCarrito})</p>
                 </Col>
             </Row>
-        </>
     );
 }
 

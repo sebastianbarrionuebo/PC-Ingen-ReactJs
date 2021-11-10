@@ -28,6 +28,9 @@
 .card--img__style:hover{
     transform: scale(1.2);
 }
+.card--container__padding{
+    padding-top: 30px;
+}
 @keyframes rotation {
     0% {
         transform:rotate(0deg);

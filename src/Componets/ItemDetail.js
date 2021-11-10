@@ -23,23 +23,23 @@ const ItemDetail = (props) => {
     }
 
     return (
-            <Card key={props.info.id} className="bg-secondary card--container__style">
-                <Row>
-                    <Col sm={4} md={4} lg={4} className="pt-4" sm={{order: 'last'}}  >
-                        <ItemCarousel props={props.info.pictureUrl}/>
-                    </Col>
-                    <Col sm={8} md={8} lg={8} sm={{order: 'first'}} >
-                        <Body>
-                            <Title className="pt-4 pb-4 text-center">{props.info.title}</Title>
-                            <Text>{props.info.description}</Text>
-                            <Text className="pt-4 pb-4 text-center">Precio: {props.info.price}</Text>
-                        </Body>
-                    </Col>
-                </Row>
-                <Footer className="card--footer__background">
-                    <ItemCount stock={props.info.stock} initial={1} add={cantidadProductos} />
-                </Footer>
-            </Card>
+        <Card key={props.info.id} className="bg-secondary card--container__style">
+            <Row>
+                <Col sm={{order: 'last'}} md={4} lg={4} className="pt-4">
+                    <ItemCarousel props={props.info.pictureUrl}/>
+                </Col>
+                <Col sm={{order: 'first'}} md={8} lg={8}>
+                    <Body>
+                        <Title className="pt-4 pb-4 text-center">{props.info.title}</Title>
+                        <Text>{props.info.description}</Text>
+                        <Text className="pt-4 pb-4 text-center">Precio: {props.info.price}</Text>
+                    </Body>
+                </Col>
+            </Row>
+            <Footer className="card--footer__background">
+                <ItemCount stock={props.info.stock} initial={1} add={cantidadProductos} />
+            </Footer>
+        </Card>
     );
 }
 

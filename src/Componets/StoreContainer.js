@@ -6,19 +6,17 @@ import "../CSS/store.css"
 
 const Store = () => {
     return (
-        <>
-            <Container fluid={true}>
-                <Row>
-                    <NavStore/>
-                </Row>
-                <Row className="container--items__padding">
-                    <Switch >
-                        <Route path="/Store" component={ItemListContainer} exact />
-                        <Route path="/productos/:id" component={ItemListContainer} exact />
-                    </Switch>
-                </Row>
-            </Container>
-        </>
+        <Container fluid={true}>
+            <Row>
+                <NavStore/>
+            </Row>
+            <Row className="container--items__padding">
+                <Switch >
+                    <Route path="/Store" component={ItemListContainer} exact />
+                    <Route path="/productos/:id" component={ItemListContainer} exact />
+                </Switch>
+            </Row>
+        </Container>
     );
 }
 

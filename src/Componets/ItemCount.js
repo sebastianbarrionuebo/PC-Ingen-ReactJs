@@ -25,37 +25,37 @@ const ItemCount = ({ stock, initial, add}) => {
     return (
         <> 
             { select ?
-            <Container>
-                <Row>
-                    <Col>
-                        <p className="text-center">El contador va: {contador}</p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="text-center p-2" sm={6}>
-                        <Button variant="success" onClick={sumar}>Sumar</Button>
-                    </Col>
-                    <Col className="text-center p-2" sm={6}>
-                        <Button variant="danger" onClick={restar}>Restar</Button>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="text-center pb-2">
-                        <Button variant="dark" onClick={addCarrito}>onAdd</Button>
-                    </Col>
-                </Row>
-            </Container>
-            :
-            <Container>
-                <Row>
-                    <Col className="text-center" >
-                        <Link className="btn btn-dark" to="/Store" >Seguir comprando</Link>
-                    </Col>
-                    <Col className="text-center" >
-                        <Link className="btn btn-dark" to="/Cart" >Ir al carrto</Link>
-                    </Col>
-                </Row>
-            </Container>
+                <Container>
+                    <Row>
+                        <Col>
+                            <p className="text-center">El contador va: {contador}</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="text-center p-2" sm={6}>
+                            <Button variant="success" onClick={sumar}>Sumar</Button>
+                        </Col>
+                        <Col className="text-center p-2" sm={6}>
+                            <Button variant="danger" onClick={restar}>Restar</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="text-center pb-2">
+                            <Button variant="dark" onClick={addCarrito}>onAdd</Button>
+                        </Col>
+                    </Row>
+                </Container>
+                :
+                <Container>
+                    <Row>
+                        <Col className="text-center" >
+                            <Link className="btn btn-dark" to="/Store" >Seguir comprando</Link>
+                        </Col>
+                        <Col className="text-center" >
+                            <Link className="btn btn-dark" to="/Cart" >Ir al carrto</Link>
+                        </Col>
+                    </Row>
+                </Container>
             }
         </>
     );

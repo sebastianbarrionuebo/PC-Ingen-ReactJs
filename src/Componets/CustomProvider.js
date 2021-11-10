@@ -1,11 +1,9 @@
 import { createContext, useState } from "react";
-
 export const contexto = createContext()
 
 const {Provider} = contexto
 
 const CustomProvider = ({children}) => {
-
     const [carrito, setCarrito] = useState([])
 
     const valorContexto = {
@@ -67,11 +65,9 @@ const CustomProvider = ({children}) => {
     }
 
     return (
-        <>
             <Provider value={valorContexto} >
                 {children}
             </Provider>
-        </>
     );
 }
 

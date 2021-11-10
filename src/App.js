@@ -5,7 +5,6 @@ import Footer from "./Componets/Footer"
 import CustomProvider from "./Componets/CustomProvider"
 
 const App = () => {
-
   return(
       <BrowserRouter>
         <CustomProvider>

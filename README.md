@@ -1,4 +1,4 @@
-# PC-Ingen(2:20)
+# PC-Ingen
 
 Esta es una página diseñada para ser utilizada como store de compras ambientada a la venta de insumos de computacion.
 

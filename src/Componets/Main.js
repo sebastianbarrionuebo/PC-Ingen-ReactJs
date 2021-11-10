@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
-import Cart from "./Cart";
+import Cart from "./CartContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import StoreContainer from "./StoreContainer";
 import Coming from "./Coming"

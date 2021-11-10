@@ -23,3 +23,4 @@ create-react-app my-app
 4) correr el siguiente comando en la consola ubicado en la carpeta de la aplicacion:
 npm run start.
 
+![Gif](https://github.com/sebastianbarrionuebo/PC-Ingen-ReactJs/blob/main/PC-Ingen.gif)

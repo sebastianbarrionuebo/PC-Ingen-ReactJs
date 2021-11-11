@@ -1,12 +1,10 @@
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import "../CSS/navStore.css"
 
 const {Item} = Nav
 
 const NavStore = () => {
-    let { url } = useRouteMatch();
-
     return ( 
         <Nav className = "justify-content-center bg-dark" variant="tabs">
             <Item className="item-style" ><Link to="/Store"> TODOS </Link></Item>

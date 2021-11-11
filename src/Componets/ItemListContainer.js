@@ -10,12 +10,11 @@ const ItemListContainer = () => {
     const {id} = useParams()
 
     useEffect(() => {
-        const ident = id
         const query = firestore.collection(`Productos`)
-        if (ident) {
-            const queryWhere = query.where(`category`, `==`, `${ident}`)
+        if (id) {
+            const queryWhere = query.where(`category`, `==`, `${id}`)
             getItems(queryWhere)
-        } else {
+        } else { 
             getItems(query)
             }
         function getItems(query) {
@@ -30,7 +29,6 @@ const ItemListContainer = () => {
                         array_final_de_productos.push(producto_final)
                     })
                     setdatosProductos(array_final_de_productos)
-                    console.log(array_final_de_productos)
                 })
                 .catch((error) => {
                     console.log("Error obteniendo documentos: ", error)

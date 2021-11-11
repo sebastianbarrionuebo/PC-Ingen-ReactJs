@@ -9,7 +9,7 @@ import "../CSS/itemDetail.css"
 const ItemDetailContainer = () => {
     const [datosProducto, setdatosProducto] = useState(null)
     const {id} = useParams()
-    console.log(id)
+    
     useEffect(() => {
         const collection = firestore.collection("Productos")
         const query = collection.doc(id).get()

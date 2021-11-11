@@ -28,8 +28,8 @@ const Footer = () => {
                             <hr />
                             <Container>
                                 <Row className="pt-2 pb-2" ><Link to="/" >Home</Link></Row>
-                                <Row className="pt-2 pb-2" ><Link to="/" >Armado</Link></Row>
-                                <Row className="pt-2 pb-2" ><Link to="/Category/1" >Store</Link></Row>
+                                <Row className="pt-2 pb-2" ><Link to="/Armado" >Armado</Link></Row>
+                                <Row className="pt-2 pb-2" ><Link to="/Store" >Store</Link></Row>
                             </Container>
                         </Col>
                     </Row>

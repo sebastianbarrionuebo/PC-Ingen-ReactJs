@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
 import StoreContainer from "./StoreContainer";
 import Coming from "./Coming"
+import Home from "./Home";
 import Cart from "./CartContainer";
 
 const Main = () => {

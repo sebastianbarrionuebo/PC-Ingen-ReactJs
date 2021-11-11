@@ -1,4 +1,4 @@
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import ItemListContainer from "./ItemListContainer"
 import NavStore from "./NavStore"
@@ -8,7 +8,7 @@ import "../CSS/store.css"
 
 const Store = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Container fluid={true}>
                 <Row>
                     <NavStore/>
@@ -18,11 +18,11 @@ const Store = () => {
                         <Route path="/Store" component={ItemListContainer} exact />
                         <Route path="/Productos/:id" component={ItemListContainer} />
                         <Route path="/Item/:id" component={ItemDetailContainer} exact />
-                        <Route path="/Cart" component={Cart} exact />
+                        <Route path="/Store/Cart" component={Cart} exact />
                     </Switch>
                 </Row>
             </Container>
-        </BrowserRouter>
+        </Router>
     );
 }
 

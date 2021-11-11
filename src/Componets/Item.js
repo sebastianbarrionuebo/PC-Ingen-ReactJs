@@ -17,7 +17,7 @@ const Item = (props) => {
                         <Text>Precio: {props.infoProducto.price}</Text>
                     </Body>
                     <Footer className="card--footer">
-                        <Link to={`/item/${props.infoProducto.ident}`} className="btn btn-dark" >Mas informacion</Link>
+                        <Link to={`/Item/${props.infoProducto.ident}`} className="btn btn-dark" >Mas informacion</Link>
                     </Footer>
                 </Col>
             </Row>

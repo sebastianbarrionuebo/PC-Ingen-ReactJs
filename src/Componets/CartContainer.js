@@ -40,7 +40,6 @@ const Cart = () => {
                 const carrito_final = {recibo,...ordenCompra}
                 setOrdenDeCompra(carrito_final)
                 setEstadoDeCompra(false)
-                limpiarProductos()
             })
             .catch((error) => {
                 console.error("Error agregando datos: ", error)

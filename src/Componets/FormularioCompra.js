@@ -9,6 +9,7 @@ const FormularioCompra = ({orden}) => {
     const [phone, setPhone] = useState()
 
     const enviarPedido = (event) => {
+        console.log("Se envia formulario")
         const buyerData = { name, email, phone }
         orden(event, buyerData)
     }

@@ -1,11 +1,12 @@
 import { Container, Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import "../CSS/header.css"
 
 const {Item} = Nav
 
 const NavItems = () => {
+
     return (
         <Container>
             <Nav className="justify-content-end">

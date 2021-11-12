@@ -52,7 +52,7 @@ const ItemCount = ({ stock, initial, add}) => {
                             <Link className="btn btn-dark" to="/Store" >Seguir comprando</Link>
                         </Col>
                         <Col className="text-center" >
-                            <Link className="btn btn-dark" to="/Cart" >Ir al carrto</Link>
+                            <Link className="btn btn-dark" to="/Store/Cart" >Ir al carrto</Link>
                         </Col>
                     </Row>
                 </Container>

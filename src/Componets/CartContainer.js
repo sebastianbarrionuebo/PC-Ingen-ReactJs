@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { memo, useContext, useState, useEffect } from "react";
 import { contexto } from "./CustomProvider";
 import { firestore } from "./firebase";
@@ -48,7 +48,7 @@ const Cart = () => {
     }
 
     return (
-        <Container fluid={true}>
+        <>
             { total ?
                     (<>
                         { estadoDeCompra ?
@@ -83,7 +83,7 @@ const Cart = () => {
                 :
                     (<p className="carritoVacio-style" >Carrito vacio</p>)
             }
-        </Container>
+        </>
     );
 }
 
